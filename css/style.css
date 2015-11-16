@@ -1,4 +1,28 @@
 body {
+	font-family: 'Lato', sans-serif;
 	color: #fff;
 	background-color: #000;
 }
+
+a{
+    color: #29abe2;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #29abe2;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffcc00;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: #29abe2;
+    background-color: transparent;
+    text-decoration: none;
+}
+
