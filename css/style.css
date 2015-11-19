@@ -57,6 +57,11 @@ a:active {
 	padding-top: 5px;
 }
 
+.morelinks {
+	font-size: 11pt;
+	color: #4d4d4d;
+}
+
 .footer {
 	font-size: 10pt;
 	font-family: Georgia;
