@@ -3,6 +3,10 @@ body {
 	color: #666666;
 	font-size: 16pt;
 	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	border-top: 6px solid #d76b7d;
+	background-color: #e6e7e8;
 }
 
 h1 {
@@ -12,9 +16,16 @@ h1 {
 
 }
 
+.intro {
+	max-width: 500px;
+	font-size: 12pt;
+}
+
 .container {
 	    padding: 0 1.6em 2.4em 6.5em;
 	    margin-top: 80px;
+	    max-width: 500px;
+	    line-height: 1.3em;
 }
 .main {
 	height: 50px;
@@ -57,9 +68,14 @@ a:active {
 	padding-top: 5px;
 }
 
+.contact {
+	color: #d76b7d;
+	line-height: 1.2em;
+}
+
 .morelinks {
-	font-size: 11pt;
-	color: #4d4d4d;
+	font-size: 12pt;
+	color: #666666;
 }
 
 .footer {
