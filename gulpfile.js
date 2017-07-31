@@ -6,7 +6,12 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-const concat = require('gulp-concat');
+const runSequence = require('run-sequence');
+const buffer = require('vinyl-buffer');
+const source = require('vinyl-source-stream');
+const browserify = require('browserify');
+const uglify = require('gulp-uglify');
+const del = require('del');
 
 /**
  * Logs the error with name of current running task.
@@ -21,21 +26,29 @@ function logError(task) {
 // Compile our sass files.
 gulp.task('sass', () => {
     return gulp.src('./app/scss/**/*.scss')
+        .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(sass())
         .on('error', logError('sass'))
+        .pipe(autoprefixer())
         .pipe(cssnano())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('app/dist/css'))
         .pipe(reload({ stream: true }));
 });
 
 // process JS files and return the stream.
 gulp.task('js', () => {
-    return gulp.src('./app/src/**/*.js')
-        .pipe(sourcemaps.init())
+    return browserify({
+        entries: './app/src/app.js',
+        debug: true
+    }).bundle()
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(concat('app.js'))
+        .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('app/dist/js'));
 });
@@ -55,10 +68,21 @@ gulp.task('serve', () => {
     });
 });
 
+
+gulp.task('cleanup', function () {
+    del('app/dist');
+});
+
 // Sets wacthers for files and runs corresponding tasks.
 gulp.task('watch', () => {
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/src/**/*.js', ['js-watch']);
+});
+
+gulp.task('build', cb => {
+    runSequence('sass',
+        'js',
+        cb);
 });
 
 gulp.task('default', ['sass', 'js', 'serve', 'watch']);
