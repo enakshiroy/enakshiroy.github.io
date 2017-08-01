@@ -17,18 +17,19 @@ const del = require('del');
  * Logs the error with name of current running task.
  * @param {string} task name of the running task. 
  */
-function logError(task) {
+function logError(task, done) {
     return (error) => {
         console.error(`[${task}] ${error.message}`);
+        done();
     };
 }
 
 // Compile our sass files.
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
     return gulp.src('./app/scss/**/*.scss')
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(sass())
-        .on('error', logError('sass'))
+        .on('error', logError('sass', done))
         .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(sourcemaps.write('.'))
@@ -37,17 +38,20 @@ gulp.task('sass', () => {
 });
 
 // process JS files and return the stream.
-gulp.task('js', () => {
+gulp.task('js', (done) => {
     return browserify({
         entries: './app/src/app.js',
         debug: true
     }).bundle()
+        .on('error', logError('js', done))
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(babel({
-            presets: ['es2015']
+            presets: ['es2015'],
+            compact: true
         }))
+        .on('error', logError('js', done))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('app/dist/js'));
@@ -67,7 +71,6 @@ gulp.task('serve', () => {
         }
     });
 });
-
 
 gulp.task('cleanup', function () {
     del('app/dist');
