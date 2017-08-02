@@ -1,0 +1,23 @@
+@import "./_variables";
+//Global line height.
+$line-height: 1.54;
+@font-face {
+    font-family: "Butler_Black_Stencil";
+    src: url("../fonts/Butler_Black_Stencil.otf");
+}
+
+html,
+body {
+    color: $text-color;
+    line-height: $line-height;
+    font-family: 'Butler_Black_Stencil', Arial Black;
+}
+
+h1 {
+    font-size: 92px;
+    font-weight: 900;
+}
+
+.info {
+    font-size: 26px;
+}

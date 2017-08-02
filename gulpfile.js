@@ -24,29 +24,41 @@ function logError(task, done) {
     };
 }
 
+// Fonts
+gulp.task('fonts', function () {
+    return gulp.src('./app/fonts/*.{ttf,otf}')
+        .pipe(gulp.dest('./app/dist/'));
+});
+
 // Compile our sass files.
-gulp.task('sass', (done) => {
+gulp.task('sass', ['fonts'], (done) => {
     return gulp.src('./app/scss/**/*.scss')
-        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        }))
         .pipe(sass())
         .on('error', logError('sass', done))
         .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('app/dist/css'))
-        .pipe(reload({ stream: true }));
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 // process JS files and return the stream.
 gulp.task('js', (done) => {
     return browserify({
-        entries: './app/src/app.js',
-        debug: true
-    }).bundle()
+            entries: './app/src/app.js',
+            debug: true
+        }).bundle()
         .on('error', logError('js', done))
         .pipe(source('app.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        }))
         .pipe(babel({
             presets: ['es2015'],
             compact: true
