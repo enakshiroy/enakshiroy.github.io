@@ -1,11 +1,17 @@
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min";
+// @import "../../node_modules/bootstrap/dist/css/bootstrap.min";
 @import "./_variables";
 @import "./_typography";
 body {
-    height: 100%;
+    height: 100vh;
     background-size: 900% 900%;
+    background-repeat: no-repeat;
     background-image: linear-gradient(-45deg, $gradient-bg-colors);
     animation: backgroundAnimation 60s ease infinite;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
 }
 
 @keyframes backgroundAnimation {
@@ -15,5 +21,30 @@ body {
     }
     50% {
         background-position: 100% 50%;
+    }
+}
+
+.nav {
+    &-bar {
+        padding-top: 93px;
+        padding-right: 206px;
+        >ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: flex-end;
+        }
+    }
+    &-item {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid transparent;
+        transition: all .15s ease-in;
+        &:hover,
+        &-active {
+            border-bottom-color: $text-color;
+        }
     }
 }

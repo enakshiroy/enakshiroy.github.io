@@ -5,16 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Enakshi Roy</title>
-    <base href="/">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
 <body ng-app="enakshi" ng-strict-di>
-    <h1>Hello, I'm Enakshi.</h1>
-    <p class="info">I am a User Interface & Experience designer <br> in Banglore, India.</p>
-    <a href="/home">Home</a>
-    <a href="/etc">Etc</a>
-    <ng-view></ng-view>
+
+    <!-- Header with nav bar -->
+    <header>
+
+        <nav class="nav-bar">
+            <ul class="list-unstyled">
+                <li class="nav-item" ng-class="{'nav-item-active': isActive('/')}">
+                    <a href="#!/">Home</a>
+                </li>
+                <li class="nav-item"><a href="javascript:void 0;">Resume</a></li>
+                <li class="nav-item" ng-class="{'nav-item-active': isActive('/etc')}">
+                    <a href="#!/etc">Etc.</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Place holder for ng-view -->
+    <section>
+        <ng-view></ng-view>
+    </section>
+
+    <!-- Scripts -->
     <script type="text/javascript" src="dist/js/app.js"></script>
 </body>
 

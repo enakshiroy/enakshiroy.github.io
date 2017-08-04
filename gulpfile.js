@@ -27,7 +27,7 @@ function logError(task, done) {
 // Fonts
 gulp.task('fonts', function () {
     return gulp.src('./app/fonts/*.{ttf,otf}')
-        .pipe(gulp.dest('./app/dist/'));
+        .pipe(gulp.dest('./app/dist/fonts'));
 });
 
 // Compile our sass files.

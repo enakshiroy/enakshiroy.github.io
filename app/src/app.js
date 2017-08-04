@@ -6,30 +6,68 @@ app.constant('Routes', require('./routes'));
 
 // config module with routes.
 (() => {
-    function config($routeProvider, $locationProvider, Routes) {
+    function config($routeProvider, Routes) {
         // TODO: Remove this ugly hack and loda tempalte gracefully.
         const base = '../src/';
-        Routes.forEach(({ url, templateUrl, controller }) => {
+        Routes.forEach(({
+            url,
+            templateUrl,
+            controller
+        }) => {
             templateUrl = `${base}${templateUrl}`;
             $routeProvider.when(url, {
-                templateUrl, controller
+                templateUrl,
+                controller
             });
         });
         // redirect to default router i.e. Home Page.
-        $routeProvider.otherwise({ redirectTo: '/' });
-        // configure html5 to get links working on jsfiddle
-        $locationProvider.html5Mode(true);
+        $routeProvider.otherwise({
+            redirectTo: '/'
+        });
     }
     app.config([
         '$routeProvider',
-        '$locationProvider',
         'Routes',
         config
     ]);
 })();
 
+// run function after configuraing application.
+// We'll mainly defined some global function which we'll be using.
+(() => {
+    function run($rootScope, $location) {
+
+        /**
+         * Opens the link in new tab.
+         * @param {string} path/link to be opened..
+         */
+        function open(link) {
+
+        }
+
+        /**
+         * Tells whether supplied path is active or not.
+         */
+        $rootScope.isActive = (path) => {
+            return path === $location.path();
+        };
+
+        /**
+         * Opens the resumes in new tab.
+         */
+        $rootScope.showResume = () => {
+            const path = 'path to file';
+            open(path);
+        };
+    };
+    app.run(['$rootScope', '$location', run]);
+})();
+
 // add controllers
 (() => {
     const controllers = require('./controllers');
-    controllers.forEach(({ name, controller }) => app.controller(name, controller));
+    controllers.forEach(({
+        name,
+        controller
+    }) => app.controller(name, controller));
 })();
