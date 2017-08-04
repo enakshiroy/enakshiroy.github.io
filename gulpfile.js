@@ -25,9 +25,14 @@ function logError(task, done) {
 }
 
 // Fonts
-gulp.task('fonts', function () {
+gulp.task('fonts', () => {
     return gulp.src('./app/fonts/*.{ttf,otf}')
         .pipe(gulp.dest('./app/dist/fonts'));
+});
+
+gulp.task('copy', () => {
+    return gulp.src('./app/src/views/*')
+        .pipe(gulp.dest('./app/dist/views'));
 });
 
 // Compile our sass files.
@@ -95,9 +100,12 @@ gulp.task('watch', () => {
 });
 
 gulp.task('build', cb => {
-    runSequence('sass',
-        'js',
+    runSequence([
+            'sass',
+            'js',
+            'copy'
+        ],
         cb);
 });
 
-gulp.task('default', ['sass', 'js', 'serve', 'watch']);
+gulp.task('default', ['sass', 'js', 'copy', 'serve', 'watch']);

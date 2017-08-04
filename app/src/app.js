@@ -8,7 +8,7 @@ app.constant('Routes', require('./routes'));
 (() => {
     function config($routeProvider, Routes) {
         // TODO: Remove this ugly hack and loda tempalte gracefully.
-        const base = '../src/';
+        const base = 'dist/';
         Routes.forEach(({
             url,
             templateUrl,
