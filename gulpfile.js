@@ -12,6 +12,7 @@ const source = require('vinyl-source-stream');
 const browserify = require('browserify');
 const uglify = require('gulp-uglify');
 const del = require('del');
+const imagemin = require('gulp-imagemin');;
 
 /**
  * Logs the error with name of current running task.
@@ -30,9 +31,19 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest('./app/dist/fonts'));
 });
 
-gulp.task('copy', () => {
+gulp.task('views', () => {
+    del('./app/dist/views');
     return gulp.src('./app/src/views/*')
         .pipe(gulp.dest('./app/dist/views'));
+});
+
+gulp.task('images', function () {
+    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+        .pipe(imagemin({
+            // Setting interlaced to true
+            interlaced: true
+        }))
+        .pipe(gulp.dest('app/dist/images'))
 });
 
 // Compile our sass files.
@@ -97,15 +108,17 @@ gulp.task('cleanup', function () {
 gulp.task('watch', () => {
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/src/**/*.js', ['js-watch']);
+    gulp.watch('app/src/**/*.html', ['views']);
 });
 
 gulp.task('build', cb => {
     runSequence([
             'sass',
             'js',
-            'copy'
+            'views',
+            'images'
         ],
         cb);
 });
 
-gulp.task('default', ['sass', 'js', 'copy', 'serve', 'watch']);
+gulp.task('default', ['sass', 'js', 'images', 'views', 'serve', 'watch']);

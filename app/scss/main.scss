@@ -1,17 +1,13 @@
-// @import "../../node_modules/bootstrap/dist/css/bootstrap.min";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min";
 @import "./_variables";
 @import "./_typography";
+// ============== Body styles and background ==================
 body {
     height: 100vh;
     background-size: 900% 900%;
     background-repeat: no-repeat;
     background-image: linear-gradient(-45deg, $gradient-bg-colors);
     animation: backgroundAnimation 60s ease infinite;
-}
-
-a {
-    text-decoration: none;
-    color: $text-color;
 }
 
 @keyframes backgroundAnimation {
@@ -24,6 +20,7 @@ a {
     }
 }
 
+// ============== Styles for navigation ==================
 .nav {
     &-bar {
         padding-top: 93px;
@@ -45,6 +42,51 @@ a {
         &:hover,
         &-active {
             border-bottom-color: $text-color;
+        }
+        >a {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+}
+
+// ================= Home.html ===========
+.home {
+    margin-top: 206px;
+    &-intro {
+        font-size: 92px;
+        font-weight: 900;
+        font-family: Butler_Black_Stencil;
+    }
+    &-caption {
+        font-size: 26px;
+    }
+    &-social {
+        margin-top: 60px;
+        >ul {
+            display: flex;
+        }
+        &-item {
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            margin-left: 12px;
+            margin-right: 13px;
+            border: solid 3px rgba(63, 63, 63, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                cursor: pointer;
+                background: rgba(63, 63, 63, 0.2);
+                border-color: transparent;
+            }
         }
     }
 }

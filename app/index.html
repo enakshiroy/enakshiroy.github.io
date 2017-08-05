@@ -10,9 +10,10 @@
 
 <body ng-app="enakshi" ng-strict-di>
 
-    <!-- Header with nav bar -->
+    <!-- Header -->
     <header>
 
+        <!-- Nav bar with all the navigation links-->
         <nav class="nav-bar">
             <ul class="list-unstyled">
                 <li class="nav-item" ng-class="{'nav-item-active': isActive('/')}">
@@ -28,7 +29,7 @@
     </header>
 
     <!-- Place holder for ng-view -->
-    <section>
+    <section class="container">
         <ng-view></ng-view>
     </section>
 

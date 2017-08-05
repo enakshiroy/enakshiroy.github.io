@@ -1,5 +1,8 @@
 function HomeController($scope) {
-    $scope.greetings = `Hola! Home Page`;
+    $scope.isExpanded = false;
+    $scope.expand = () => {
+        $scope.isExpanded = true;
+    };
 }
 module.exports = {
     name: 'HomeController',
