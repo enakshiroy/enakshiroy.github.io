@@ -108,7 +108,7 @@ gulp.task('cleanup', function () {
 gulp.task('watch', () => {
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/src/**/*.js', ['js-watch']);
-    gulp.watch('app/src/**/*.html', ['views']);
+    gulp.watch('app/src/views/*.html', ['views']);
 });
 
 gulp.task('build', cb => {
