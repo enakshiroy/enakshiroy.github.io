@@ -50,6 +50,32 @@ body {
     }
 }
 
+.social {
+    display: flex;
+    &-item {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        margin-left: 12px;
+        margin-right: 13px;
+        border: solid 3px rgba(63, 63, 63, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            cursor: pointer;
+            background: rgba(63, 63, 63, 0.2);
+            border-color: transparent;
+        }
+    }
+}
+
 // ================= Home.html ===========
 .home {
     margin-top: 206px;
@@ -63,30 +89,29 @@ body {
     }
     &-social {
         margin-top: 60px;
-        >ul {
-            display: flex;
+        margin-bottom: 60px;
+    }
+}
+
+// ================= etc.html  ===========
+.etc {
+    &-pic {
+        margin-top: 60px;
+        margin-bottom: 42px;
+        >img {
+            width: 244px;
+            height: 288px;
+            object-fit: contain;
+            opacity: 0.5;
         }
-        &-item {
-            width: 66px;
-            height: 66px;
-            border-radius: 50%;
-            margin-left: 12px;
-            margin-right: 13px;
-            border: solid 3px rgba(63, 63, 63, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &:first-child {
-                margin-left: 0;
-            }
-            &:last-child {
-                margin-right: 0;
-            }
-            &:hover {
-                cursor: pointer;
-                background: rgba(63, 63, 63, 0.2);
-                border-color: transparent;
-            }
-        }
+    }
+    &-about {
+        width: 672px;
+        margin-right: auto;
+        font-size: 18px;
+    }
+    &-social {
+        margin-top: 35px;
+        margin-bottom: 35px;
     }
 }
