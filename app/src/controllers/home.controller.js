@@ -1,4 +1,5 @@
 function HomeController($scope) {
+
     $scope.isExpanded = false;
     $scope.expand = () => {
         $scope.isExpanded = true;

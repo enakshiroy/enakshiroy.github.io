@@ -18,33 +18,129 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
-<body ng-app="enakshi" ng-strict-di>
-
-    <!-- Header -->
-    <header>
-
-        <!-- Nav bar with all the navigation links-->
-        <nav class="nav-bar">
-            <ul class="list-unstyled">
-                <li class="nav-item" ng-class="{'nav-item-active': isActive('/')}">
-                    <a href="#!/">Home</a>
-                </li>
-                <li class="nav-item"><a href="javascript:void 0;">Resume</a></li>
-                <li class="nav-item" ng-class="{'nav-item-active': isActive('/etc')}">
-                    <a href="#!/etc">Etc.</a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
+<body ng-strict-di ng-app="enakshi" ng-controller="HomeController">
 
     <!-- Place holder for ng-view -->
     <section class="container">
-        <ng-view></ng-view>
-    </section>
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="dist/js/app.js"></script>
+        <!-- Introduction -->
+        <section class="intro" id="intro">
+            <!-- title -->
+            <h1 class="title">
+                Hello, I&rsquo;m Enakshi
+            </h1>
+
+            <!-- caption -->
+            <p class="caption">
+                I&rsquo;m an independent (freelance/consulting) User Interface and
+                <br> Experience Designer based in Bangalore, India.
+            </p>
+
+            <!-- Social Navigation link -->
+            <nav class="intro-social">
+
+                <!-- Behance -->
+                <div class="intro-social-link">
+                    <span class="icon">
+                        <a href="https://www.behance.net/enakshi" target="_blank">
+                            <img src="images/behance-enakshi.png" srcset="images/behance-enakshi@2x.png 2x, images/behance-enakshi@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+
+                <!-- Linked In -->
+                <div class="intro-social-link">
+                    <span class="icon">
+                        <a href="https://www.linkedin.com/in/enakshiroy" target="_blank">
+                            <img src="images/linkedin-enakshi.png" srcset="images/linkedin-enakshi@2x.png 2x, images/linkedin-enakshi@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+
+                <!-- Email -->
+                <div class="intro-social-link">
+                    <span class="icon">
+                        <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
+                            <img src="images/email-enakshi.png" srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+
+                <!-- More -->
+                <div class="intro-social-link" ng-click="expand()" ng-if="!isExpanded">
+                    <span class="icon">
+                        <a>
+                            <img src="images/more.png" srcset="images/more@2x.png 2x, images/more@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+
+                <!-- Dribble -->
+                <div class="intro-social-link" ng-if="isExpanded">
+                    <span class="icon">
+                        <a href="https://dribbble.com/enakshi" target="_blank">
+                            <img src="images/enakshi-dribbble.png" srcset="images/enakshi-dribbble@2x.png 2x, images/enakshi-dribbble@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+
+                <!-- Phone call -->
+                <div class="intro-social-link" ng-if="isExpanded">
+                    <span class="icon">
+                        <a href="tel:888-491-2798" target="_top">
+                            <img src="images/linkedin-enakshi.png" srcset="images/linkedin-enakshi@2x.png 2x, images/linkedin-enakshi@3x.png 3x">
+                        </a>
+                    </span>
+                </div>
+            </nav>
+
+        </section>
+        <!-- /Introduction -->
+
+        <section class="contact" id="contact">
+
+            <!-- title -->
+            <h1 class="title">
+                Contact
+            </h1>
+
+            <!-- caption -->
+            <p class="caption">
+                Email is the best way to get in touch. You're welcome to call me, but
+                <br> only if you're giving away free sushi.
+            </p>
+
+            <nav class="contact-info">
+                <ul class="list-unstyled">
+                    <!-- Mail -->
+                    <li class="contact-info-item">
+                        <span class="icon">
+                            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
+                                <img src="images/email-enakshi.png" srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">enakshi249@gmail.com</a>
+                        </span>
+                    </li>
+                    <!-- Call -->
+                    <li class="contact-info-item">
+                        <span class="icon">
+                            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
+                                <img src="images/email-enakshi.png" srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="tel:888-491-2798" target="_top">+91 888 491 2798</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="dist/js/app.js"></script>
 </body>
 
 </html>
