@@ -4,6 +4,8 @@ $line-height-base: 1.54;
 $font-family-base: Georgia,
 'Arial Black';
 $font-size-base: 16px;
+$selection-color: #636363;
+$white: #fff;
 @font-face {
     font-family: "Butler_Black_Stencil";
     src: url("../fonts/Butler_Black_Stencil.otf");
@@ -15,4 +17,9 @@ body {
     line-height: $line-height-base;
     font-family: $font-family-base;
     font-size: $font-size-base;
+}
+
+::selection {
+    color: $white;
+    background-color: $selection-color;
 }
