@@ -1,0 +1,27 @@
+[{
+        "title": "Title 1",
+        "thumbnail": "path/to/thumbnail",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 2",
+        "thumbnail": "url to thumbnail",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    }
+]
