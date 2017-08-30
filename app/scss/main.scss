@@ -10,6 +10,15 @@ body {
     animation: backgroundAnimation 60s ease infinite;
 }
 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
 .text-link {
     padding-bottom: 5px;
     border-bottom: 1px solid $text-color;
