@@ -13,7 +13,7 @@
     },
     {
         "title": "Title 2",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350/?gravity=east",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -26,7 +26,7 @@
     },
     {
         "title": "Title 3",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350/?gravity=west",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -39,7 +39,7 @@
     },
     {
         "title": "Title 4",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350/?gravity=north",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -52,7 +52,7 @@
     },
     {
         "title": "Title 5",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350/?gravity=south",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -65,7 +65,7 @@
     },
     {
         "title": "Title 6",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/g/350x350",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -78,7 +78,7 @@
     },
     {
         "title": "Title 7",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350?image=1068",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -91,7 +91,7 @@
     },
     {
         "title": "Title 8",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://unsplash.it/350/350?image=1060",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -104,7 +104,7 @@
     },
     {
         "title": "Title 9",
-        "thumbnail": "http://placekitten.com/350/350",
+        "thumbnail": "https://source.unsplash.com/random/350x350",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
