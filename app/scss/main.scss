@@ -4,7 +4,7 @@
 // ============== Body styles and background ==================
 body {
     height: 100vh;
-    background-size: 900% 900%;
+    background-size: 900% 1500%;
     background-repeat: no-repeat;
     background-image: linear-gradient(-45deg, $gradient-bg-colors);
     animation: backgroundAnimation 60s ease infinite;
@@ -127,6 +127,17 @@ body {
     >.container {
         >h1 {
             margin-bottom: 40px;
+        }
+    }
+    &-grid {
+        margin-top: 44px;
+        margin-bottom: 78px;
+        &-item {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            >.caption {
+                margin-top: 10px;
+            }
         }
     }
 }

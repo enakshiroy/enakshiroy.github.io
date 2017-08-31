@@ -97,7 +97,7 @@
         </section>
     </section>
     <!-- /Introduction -->
-    <section class="work">
+    <section class="work ng-cloak">
         <!-- Work -->
         <section class="container">
             <h1 class="title">Work</h1>
@@ -105,6 +105,18 @@
                 A few samples of my work are showcased below. <br> My resume can be found
                 <a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a>.
             </p>
+            <section class="work-grid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in projects">
+                            <div class="col-xs-12 col-sm-12 col-md-12 work-grid-item">
+                                <img ng-src="{{project.thumbnail}}" width="350px" height="350px">
+                                <p class="caption">{{project.title}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <p class="caption">
                 More on <a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a>
             </p>

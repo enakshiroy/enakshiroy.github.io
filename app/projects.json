@@ -1,6 +1,6 @@
 [{
         "title": "Title 1",
-        "thumbnail": "path/to/thumbnail",
+        "thumbnail": "http://placekitten.com/350/350",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
@@ -13,7 +13,98 @@
     },
     {
         "title": "Title 2",
-        "thumbnail": "url to thumbnail",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 3",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 4",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 5",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 6",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 7",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 8",
+        "thumbnail": "http://placekitten.com/350/350",
+        "images": [
+            "path/of/image/1",
+            "path/of/image/2",
+            "path/of/image/3",
+            "path/of/image/4",
+            "path/of/image/5"
+        ],
+        "descripttion": "first level description for the project",
+        "description_more": "more detail about the project"
+    },
+    {
+        "title": "Title 9",
+        "thumbnail": "http://placekitten.com/350/350",
         "images": [
             "path/of/image/1",
             "path/of/image/2",
