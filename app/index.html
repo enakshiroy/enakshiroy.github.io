@@ -20,11 +20,29 @@
 
 <body ng-strict-di ng-app="enakshi" ng-controller="HomeController">
 
-    <!-- Place holder for ng-view -->
-    <section class="container">
+    <!-- Header with nav bar -->
+    <header>
+
+        <nav class="nav-bar">
+            <ul class="list-unstyled">
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="text-link" scroll-to="home" duration="500">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="text-link" scroll-to="work">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="text-link" scroll-to="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="container" id="home">
 
         <!-- Introduction -->
-        <section class="intro" id="intro">
+        <section class="intro">
             <!-- title -->
             <h1 class="title">
                 Hello, I&rsquo;m Enakshi
@@ -97,7 +115,7 @@
         </section>
     </section>
     <!-- /Introduction -->
-    <section class="work ng-cloak">
+    <section class="work ng-cloak" id="work">
         <!-- Work -->
         <section class="container">
             <h1 class="title">Work</h1>
@@ -110,7 +128,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in projects">
                             <div class="col-xs-12 col-sm-12 col-md-12 work-grid-item">
-                                <img ng-src="{{project.thumbnail}}" width="350px" height="350px">
+                                <img class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="350px" height="350px"
+                                    data-toggle="modal" data-target="#projectModal">
                                 <p class="caption">{{project.title}}</p>
                             </div>
                         </div>
@@ -124,9 +143,9 @@
     </section>
     <!-- /Work -->
 
-    <section class="container">
+    <section class="container" id="contact">
         <!-- Contact -->
-        <section class="contact" id="contact">
+        <section class="contact">
 
             <!-- title -->
             <h1 class="title">
@@ -168,7 +187,46 @@
 
         </section>
     </section>
-    <!-- Contact -->
+
+    <!-- TODO: Create a modal directive -->
+    <!-- Project Modal. -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-modal">
+                        <div class="project-modal-nav">
+                            <button ng-disabled="isFirst(selectedProject)" ng-click="select(prev(selectedProject))">
+                                <span class="icon">
+                                    <img src="images/left.png" srcset="images/left@2x.png 2x, images/left@3x.png 3x">
+                                </span>
+                            </button>
+                        </div>
+                        <div class="project-modal-info" ng-init="showMore = false;">
+                            <h3 class="project-modal-title">{{selectedProject.title}}</h3>
+                            <p class="caption">{{selectedProject.description}}</p>
+                            <more>
+                                <p class="caption">{{selectedProject.description_more}}</p>
+                            </more>
+                            <div class="project-modal-image" ng-repeat="src in selectedProject.images">
+                                <img ng-src="{{src}}" width="100%">
+                            </div>
+                        </div>
+                        <div class="project-modal-nav">
+                            <button ng-disabled="isLast(selectedProject)" ng-click="select(next(selectedProject))">
+                                <span class="icon">
+                                    <img src="images/right.png" srcset="images/right@2x.png 2x, images/right@3x.png 3x">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="dist/js/app.js"></script>
