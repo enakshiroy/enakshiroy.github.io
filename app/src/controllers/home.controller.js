@@ -1,5 +1,12 @@
 function HomeController($scope, ProjectFactory) {
 
+    $scope.introData = [
+        'I&rsquo;m an independent (freelance/consulting) User Interface and<br>Experience Designer based in Bangalore, India.',
+        'This is dummy text. This will be replaced by actual text. <br> Will be replaced.',
+        'This is another dummy text. This will also be replaced by actualy text.<br> Will be replaced.',
+        'Blah blah blah'
+    ];
+
     /**
      * On load for controller. We'll do our basic setup in it.
      */

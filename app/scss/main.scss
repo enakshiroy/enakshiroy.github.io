@@ -3,16 +3,22 @@
 @import "./_mixins";
 @import "./_typography";
 // ============== Body styles and background ==================
-html {
-    background: $white;
-}
-
 body {
-    margin: 21px;
     background-size: 1500% 1500%;
     background-repeat: no-repeat;
     background-image: linear-gradient(-45deg, $gradient-bg-colors);
-    animation: backgroundAnimation 60s ease infinite;
+    animation: backgroundAnimation 10s linear infinite;
+    padding: 71px; // border(21) + width(50)
+}
+
+@keyframes backgroundAnimation {
+    0%,
+    100% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 // CSS to remove ugly curly braces.
@@ -25,62 +31,34 @@ body {
     display: none !important;
 }
 
-//======= Overriding Bootstrap Modal =====.
-.modal-dialog {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.modal-content {
-    height: 100%;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.modal-header {
-    padding: 15px 15px 5px 15px;
-    border-bottom: none;
-    .close {
-        color: $text-color;
-        opacity: 1;
+// body borders
+.bd-border {
+    position: fixed;
+    background: white;
+    z-index: 99;
+    &-left,
+    &-right {
+        top: 0;
+        bottom: 0;
+        width: 21px;
     }
-}
-
-.modal-body {
-    padding: 0;
-    height: 90%;
-    overflow-y: auto;
-}
-
-// ====================
-.text-link {
-    padding-bottom: 5px;
-    border-bottom: 1px solid $text-color;
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-        color: $text-color;
-        text-decoration: none;
+    &-left {
+        left: 0;
     }
-    &:hover {
-        opacity: 0.5;
+    &-right {
+        right: 0;
     }
-}
-
-.bold-type {
-    font-weight: bold;
-}
-
-@keyframes backgroundAnimation {
-    0%,
-    100% {
-        background-position: 0% 50%
+    &-top,
+    &-bottom {
+        left: 0;
+        right: 0;
+        height: 21px;
     }
-    50% {
-        background-position: 100% 50%;
+    &-top {
+        top: 0;
+    }
+    &-bottom {
+        bottom: 0;
     }
 }
 
@@ -94,10 +72,11 @@ body {
     font-family: Butler_Black_Stencil;
 }
 
-.caption {
+.info {
     font-size: 18px;
 }
 
+//=== All icons styling.
 .icon {
     width: 50px;
     height: 50px;
@@ -111,10 +90,33 @@ body {
     }
 }
 
+// ==================== Text Links ===
+.text-link {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $text-color;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: $text-color;
+        text-decoration: none;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+    &-more {
+        .info {
+            transition: all 0.2s linear;
+            overflow: hidden;
+        }
+    }
+}
+
+// ====== Header Navigation bar ======
 .nav {
     &-bar {
+        // TODO: Adjust spacing accordingly.
         padding-top: 93px;
-        padding-right: 206px;
         >ul {
             list-style: none;
             display: flex;
@@ -137,9 +139,13 @@ body {
     }
 }
 
-// ================= Introduction ===========
-.intro {
-    margin-top: 141px;
+// ====== Home ======
+.home {
+    padding-top: 141px;
+    padding-bottom: 186px;
+    >.title {
+        margin-bottom: 14px;
+    }
     &-social {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -157,48 +163,26 @@ body {
     }
 }
 
-// ================= Work ===========
+// ================= Work ===================
 .work {
-    margin-top: 186px;
-    margin-bottom: 128px;
     background: white;
-    padding-top: 165px;
-    padding-bottom: 135px;
-    >.container {
-        >h1 {
-            margin-bottom: 40px;
-        }
-    }
-    &-grid {
-        margin-top: 44px;
-        margin-bottom: 78px;
-        &-item {
-            &-thumbnail {
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            margin-top: 30px;
-            margin-bottom: 30px;
-            >.caption {
-                margin-top: 10px;
-            }
-        }
-    }
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 141px 50px 221px 50px;
 }
 
 // ================= Contact =================
 .contact {
-    margin-bottom: 221px;
-    .caption {
+    padding-top: 141px;
+    padding-bottom: 221px;
+    .info {
         margin-top: 40px;
         margin-bottom: 47px;
     }
     &-info {
         &-item {
             display: flex;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             align-items: center;
             >span {
                 margin-left: 8px;
@@ -207,62 +191,8 @@ body {
             a {
                 border: none;
             }
-        }
-    }
-}
-
-//============= Project Modal ==============
-.project {
-    &-modal {
-        display: flex;
-        height: 100%;
-        &-info {
-            flex-grow: 1;
-            overflow-y: auto;
-            text-align: center;
-            max-width: 854px;
-            margin-left: auto;
-            margin-right: auto;
-            .caption {
-                font-size: 26px;
-                margin: 0;
-            }
-            .text-link {
-                font-size: 16px;
-            }
-        }
-        &-title {
-            font-size: 26px;
-            padding: 0;
-            margin: 0 0 22px;
-            font-weight: bold;
-        }
-        &-image {
-            margin-top: 26px;
-            margin-bottom: 26px;
             &:last-child {
                 margin-bottom: 0;
-            }
-        }
-        &-nav {
-            @include flexCenter();
-            padding: 5px;
-            >button {
-                background: transparent;
-                border: none;
-                &:focus {
-                    outline: none;
-                }
-            }
-            >button[disabled] {
-                >.icon {
-                    opacity: 0.5;
-                    &:hover {
-                        cursor: not-allowed;
-                        background: transparent;
-                        border-color: rgba(63, 63, 63, 0.2);
-                    }
-                }
             }
         }
     }

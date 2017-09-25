@@ -19,6 +19,7 @@ body {
     font-size: $font-size-base;
 }
 
+// Text selection highlight.
 ::selection {
     color: $white;
     background-color: $selection-color;

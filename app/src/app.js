@@ -19,6 +19,15 @@ app.constant('jQuery', jQuery);
     }) => app.factory(name, factory));
 })();
 
+// add filters 
+(() => {
+    const filters = require('./filters');
+    filters.forEach(({
+        name,
+        filter
+    }) => app.filter(name, filter));
+})();
+
 // add directives
 (() => {
     const directives = require('./directives');
