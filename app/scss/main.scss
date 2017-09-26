@@ -78,15 +78,91 @@ body {
 
 //=== All icons styling.
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
-    border: solid 3px rgba(63, 63, 63, 0.2);
-    @include flexCenter();
-    &:hover {
-        cursor: pointer;
-        background: rgba(63, 63, 63, 0.2);
-        border-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    &-behance {
+        background-image: url("../images/behance.png");
+        background-image: image-set( url("../images/behance.png") 1x, url("../images/behance@2x.png") 2x, url("../images/behance@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/behance-er.png");
+            background-image: image-set( url("../images/behance-er.png") 1x, url("../images/behance-er@2x.png") 2x, url("../images/behance-er@3x.png") 3x);
+        }
+    }
+    &-call {
+        background-image: url("../images/call.png");
+        background-image: image-set( url("../images/call.png") 1x, url("../images/call@2x.png") 2x, url("../images/call@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/call-er.png");
+            background-image: image-set( url("../images/call-er.png") 1x, url("../images/call-er@2x.png") 2x, url("../images/call-er@3x.png") 3x);
+        }
+    }
+    &-deviant {
+        background-image: url("../images/deviant-art.png");
+        background-image: image-set( url("../images/deviant-art.png") 1x, url("../images/deviant-art@2x.png") 2x, url("../images/deviant-art@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/deviant-art-er.png");
+            background-image: image-set( url("../images/deviant-art-er.png") 1x, url("../images/deviant-art-er@2x.png") 2x, url("../images/deviant-art-er@3x.png") 3x);
+        }
+    }
+    &-dribbble {
+        background-image: url("../images/dribbble.png");
+        background-image: image-set( url("../images/dribbble.png") 1x, url("../images/dribbble@2x.png") 2x, url("../images/dribbble@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/dribbble-er.png");
+            background-image: image-set( url("../images/dribbble-er.png") 1x, url("../images/dribbble-er@2x.png") 2x, url("../images/dribbble-er@3x.png") 3x);
+        }
+    }
+    &-email {
+        background-image: url("../images/email.png");
+        background-image: image-set( url("../images/email.png") 1x, url("../images/email@2x.png") 2x, url("../images/email@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/email-er.png");
+            background-image: image-set( url("../images/email-er.png") 1x, url("../images/email-er@2x.png") 2x, url("../images/email-er@3x.png") 3x);
+        }
+    }
+    &-etc {
+        background-image: url("../images/etc.png");
+        background-image: image-set( url("../images/etc.png") 1x, url("../images/etc@2x.png") 2x, url("../images/etc@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/etc-er.png");
+            background-image: image-set( url("../images/etc-er.png") 1x, url("../images/etc-er@2x.png") 2x, url("../images/etc-er@3x.png") 3x);
+        }
+    }
+    &-facebook {
+        background-image: url("../images/fb.png");
+        background-image: image-set( url("../images/fb.png") 1x, url("../images/fb@2x.png") 2x, url("../images/fb@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/fb-er.png");
+            background-image: image-set( url("../images/fb-er.png") 1x, url("../images/fb-er@2x.png") 2x, url("../images/fb-er@3x.png") 3x);
+        }
+    }
+    &-instagram {
+        background-image: url("../images/instagram_2.png");
+        background-image: image-set( url("../images/instagram_2.png") 1x, url("../images/instagram_2@2x.png") 2x, url("../images/instagram_2@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/insta-er.png");
+            background-image: image-set( url("../images/insta-er.png") 1x, url("../images/insta-er@2x.png") 2x, url("../images/insta-er@3x.png") 3x);
+        }
+    }
+    &-linkedin {
+        background-image: url("../images/linkedin.png");
+        background-image: image-set( url("../images/linkedin.png") 1x, url("../images/linkedin@2x.png") 2x, url("../images/linkedin@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/linkedin-er.png");
+            background-image: image-set( url("../images/linkedin-er.png") 1x, url("../images/linkedin-er@2x.png") 2x, url("../images/linkedin-er@3x.png") 3x);
+        }
+    }
+    &-tumblr {
+        background-image: url("../images/tumblr.png");
+        background-image: image-set( url("../images/tumblr.png") 1x, url("../images/tumblr@2x.png") 2x, url("../images/tumblr@3x.png") 3x);
+        &:hover {
+            background-image: url("../images/tumblr-er.png");
+            background-image: image-set( url("../images/tumblr-er.png") 1x, url("../images/tumblr-er@2x.png") 2x, url("../images/tumblr-er@3x.png") 3x);
+        }
     }
 }
 
@@ -151,8 +227,7 @@ body {
         padding-bottom: 50px;
         display: flex;
         &-link {
-            margin-left: 13px;
-            margin-right: 12px;
+            margin-right: 25px;
             &:first-child {
                 margin-left: 0px;
             }
@@ -182,17 +257,15 @@ body {
     &-info {
         &-item {
             display: flex;
-            margin-bottom: 20px;
             align-items: center;
-            >span {
-                margin-left: 8px;
-                margin-right: 8px;
-            }
-            a {
+            margin-bottom: 20px;
+            >a {
                 border: none;
-            }
-            &:last-child {
-                margin-bottom: 0;
+                padding-bottom: 0;
+                margin-right: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }

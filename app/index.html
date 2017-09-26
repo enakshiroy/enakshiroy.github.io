@@ -65,57 +65,45 @@
 
             <!-- Behance -->
             <div class="home-social-link">
-                <span class="icon">
-                    <a href="https://www.behance.net/enakshi" target="_blank">
-                        <img src="images/behance-enakshi.png" srcset="images/behance-enakshi@2x.png 2x, images/behance-enakshi@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-behance" href="https://www.behance.net/enakshi" target="_blank">
+                </a>
             </div>
 
             <!-- Linked In -->
             <div class="home-social-link">
-                <span class="icon">
-                    <a href="https://www.linkedin.com/in/enakshiroy" target="_blank">
-                        <img src="images/linkedin-enakshi.png" srcset="images/linkedin-enakshi@2x.png 2x, images/linkedin-enakshi@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-linkedin" href="https://www.linkedin.com/in/enakshiroy" target="_blank"></a>
             </div>
 
-            <!-- Email -->
+            <!-- Dribble -->
             <div class="home-social-link">
-                <span class="icon">
-                    <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
-                        <img src="images/email-enakshi.png" srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-dribbble" href="https://dribbble.com/enakshi" target="_blank"></a>
             </div>
 
             <!-- More -->
             <div class="home-social-link" ng-click="expand()" ng-if="!isExpanded">
-                <span class="icon">
-                    <a>
-                        <img src="images/more.png" srcset="images/more@2x.png 2x, images/more@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-etc" href="javascript: void(0);"></a>
             </div>
 
-            <!-- Dribble -->
+            <!-- Facebook -->
             <div class="home-social-link" ng-if="isExpanded">
-                <span class="icon">
-                    <a href="https://dribbble.com/enakshi" target="_blank">
-                        <img src="images/enakshi-dribbble.png" srcset="images/enakshi-dribbble@2x.png 2x, images/enakshi-dribbble@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-facebook" href="https://www.facebook.com/enakshi.roy" target="_blank"></a>
             </div>
 
-            <!-- Phone call -->
+            <!-- Instagram -->
             <div class="home-social-link" ng-if="isExpanded">
-                <span class="icon">
-                    <a href="tel:888-491-2798" target="_top">
-                        <img src="images/call-me-maybe.png" srcset="images/call-me-maybe@2x.png 2x, images/call-me-maybe@3x.png 3x">
-                    </a>
-                </span>
+                <a class="icon icon-instagram" href="https://www.instagram.com/enakshizz/" target="_blank"></a>
             </div>
+
+            <!-- Deviant Art -->
+            <div class="home-social-link" ng-if="isExpanded">
+                <a class="icon icon-deviant" href="https://craproy.deviantart.com/" target="_blank"></a>
+            </div>
+
+            <!-- Tumblr -->
+            <div class="home-social-link" ng-if="isExpanded">
+                <a class="icon icon-tumblr" href="javascript: alert('No link provided!');" target="_blank"></a>
+            </div>
+
         </nav>
 
     </section>
@@ -147,29 +135,16 @@
 
         <nav class="contact-info">
             <ul class="list-unstyled">
-
                 <!-- Mail -->
                 <li class="contact-info-item">
-                    <span class="icon">
-                        <a class="text-link" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
-                            <img src="images/email-enakshi.png" srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
-                        </a>
-                    </span>
-                    <span>
-                        <a class="text-link" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">enakshi249@gmail.com</a>
-                    </span>
+                    <a class="icon icon-email" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top"></a>
+                    <a class="text-link" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">enakshi249@gmail.com</a>
                 </li>
 
                 <!-- Call -->
                 <li class="contact-info-item">
-                    <span class="icon">
-                        <a class="text-link" href="tel:888-491-2798" target="_top">
-                            <img src="images/call-me-maybe.png" srcset="images/call-me-maybe@2x.png 2x, images/call-me-maybe@3x.png 3x">
-                        </a>
-                    </span>
-                    <span>
-                        <a class="text-link" href="tel:888-491-2798" target="_top">+91 888 491 2798</a>
-                    </span>
+                    <a class="icon icon-call" href="tel:888-491-2798" target="_top"></a>
+                    <a class="text-link" href="tel:888-491-2798" target="_top">+91 888 491 2798</a>
                 </li>
             </ul>
         </nav>
