@@ -84,12 +84,31 @@ body {
     cursor: pointer;
     display: inline-block;
     border: none;
+    position: relative;
+    &::after {
+        top: -30px;
+        position: absolute;
+        content: ' ';
+        width: 100%;
+        text-align: center;
+        color: $text-color;
+        opacity: 0;
+        transition: all 0.5s linear;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
     &-behance {
         background-image: url("../images/behance.png");
         background-image: image-set( url("../images/behance.png") 1x, url("../images/behance@2x.png") 2x, url("../images/behance@3x.png") 3x);
         &:hover {
             background-image: url("../images/behance-er.png");
             background-image: image-set( url("../images/behance-er.png") 1x, url("../images/behance-er@2x.png") 2x, url("../images/behance-er@3x.png") 3x);
+        }
+        &::after {
+            content: 'Behance';
         }
     }
     &-call {
@@ -107,6 +126,9 @@ body {
             background-image: url("../images/deviant-art-er.png");
             background-image: image-set( url("../images/deviant-art-er.png") 1x, url("../images/deviant-art-er@2x.png") 2x, url("../images/deviant-art-er@3x.png") 3x);
         }
+        &::after {
+            content: 'Deviant';
+        }
     }
     &-dribbble {
         background-image: url("../images/dribbble.png");
@@ -114,6 +136,9 @@ body {
         &:hover {
             background-image: url("../images/dribbble-er.png");
             background-image: image-set( url("../images/dribbble-er.png") 1x, url("../images/dribbble-er@2x.png") 2x, url("../images/dribbble-er@3x.png") 3x);
+        }
+        &::after {
+            content: 'Dribbble';
         }
     }
     &-email {
@@ -131,6 +156,9 @@ body {
             background-image: url("../images/etc-er.png");
             background-image: image-set( url("../images/etc-er.png") 1x, url("../images/etc-er@2x.png") 2x, url("../images/etc-er@3x.png") 3x);
         }
+        &::after {
+            content: 'More';
+        }
     }
     &-facebook {
         background-image: url("../images/fb.png");
@@ -138,6 +166,9 @@ body {
         &:hover {
             background-image: url("../images/fb-er.png");
             background-image: image-set( url("../images/fb-er.png") 1x, url("../images/fb-er@2x.png") 2x, url("../images/fb-er@3x.png") 3x);
+        }
+        &::after {
+            content: 'Facebook';
         }
     }
     &-instagram {
@@ -147,6 +178,9 @@ body {
             background-image: url("../images/insta-er.png");
             background-image: image-set( url("../images/insta-er.png") 1x, url("../images/insta-er@2x.png") 2x, url("../images/insta-er@3x.png") 3x);
         }
+        &::after {
+            content: 'Instagram';
+        }
     }
     &-linkedin {
         background-image: url("../images/linkedin.png");
@@ -155,6 +189,9 @@ body {
             background-image: url("../images/linkedin-er.png");
             background-image: image-set( url("../images/linkedin-er.png") 1x, url("../images/linkedin-er@2x.png") 2x, url("../images/linkedin-er@3x.png") 3x);
         }
+        &::after {
+            content: 'Linkedin';
+        }
     }
     &-tumblr {
         background-image: url("../images/tumblr.png");
@@ -162,6 +199,9 @@ body {
         &:hover {
             background-image: url("../images/tumblr-er.png");
             background-image: image-set( url("../images/tumblr-er.png") 1x, url("../images/tumblr-er@2x.png") 2x, url("../images/tumblr-er@3x.png") 3x);
+        }
+        &::after {
+            content: 'Tumblr';
         }
     }
 }
