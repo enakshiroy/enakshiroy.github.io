@@ -1,4 +1,4 @@
-function HomeController($scope, ProjectFactory) {
+function HomeController($scope, ProjectFactory, jQuery) {
 
     $scope.introData = [
         'I&rsquo;m an independent (freelance/consulting) User Interface and<br>Experience Designer based in Bangalore, India.',
@@ -21,44 +21,25 @@ function HomeController($scope, ProjectFactory) {
     };
 
     /**
-     * Tells whether a project is at a particular index or not.
-     * @param {*} project 
-     * @param {*} index 
-     */
-    const isAt = (project, index) => $scope.projects.indexOf(project) === index;
-
-    $scope.isExpanded = false;
-
-    /**
      * All the projects.
      */
     $scope.projects = [];
 
-    $scope.expand = () => {
-        $scope.isExpanded = true;
-    };
-
-    $scope.selectedProject = null;
-
     $scope.select = (project) => {
-        $scope.selectedProject = project;
-    };
-
-    $scope.isLast = (project = $scope.selectedProject) => {
-        return isAt($scope.selectedProject, $scope.projects.length - 1);
-    };
-
-    $scope.isFirst = (project = $scope.selectedProject) => {
-        return isAt($scope.selectedProject, 0);
-    };
-
-    $scope.next = (project = $scope.selectedProject) => {
+        const modal = jQuery('#myCarousel');
         const index = $scope.projects.indexOf(project);
-        return $scope.projects[index + 1] || null;
+        modal.carousel(index);
     };
-    $scope.prev = (project = $scope.selectedProject) => {
-        const index = $scope.projects.indexOf(project);
-        return $scope.projects[index - 1] || null;
+
+    $scope.next = () => {
+        // TODO: Create directive.
+        const modal = jQuery('#myCarousel');
+        modal.carousel('next');
+    };
+    $scope.prev = () => {
+        // TODO: Create directive.
+        const modal = jQuery('#myCarousel');
+        modal.carousel('prev');
     };
 
     // All set. Let's invoke onLoad.
@@ -69,6 +50,7 @@ module.exports = {
     controller: [
         '$scope',
         'ProjectFactory',
+        'jQuery',
         HomeController
     ]
 };

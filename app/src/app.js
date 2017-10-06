@@ -54,7 +54,7 @@ app.constant('jQuery', jQuery);
     window.onload = () => {
         const modal = jQuery('#projectModal');
         const toggleBlur = () => {
-            const containers = jQuery('.container');
+            const containers = jQuery('body > section');
             containers.each((index, value) => {
                 jQuery(value).toggleClass('blur');
             });

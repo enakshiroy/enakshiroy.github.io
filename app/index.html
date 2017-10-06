@@ -112,9 +112,24 @@
     <section id="work" class="work">
         <h1 class="title">Work</h1>
         <p class="caption">
-            A few samples of my work are showcased below. <br> My resume can be found
-            <a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a>.
+            I specialise in designing for digital interfaces, a few samples of which <br> are showcased below. My resume
+            can be found <a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a>.
         </p>
+        <!-- Project Grid -->
+        <section class="work-grid">
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in projects">
+                        <div class="work-grid-item">
+                            <img class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="350px" height="350px"
+                                data-toggle="modal" data-target="#projectModal">
+                            <p class="caption">{{project.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- /Project Grid -->
     </section>
 
 
@@ -150,6 +165,68 @@
         </nav>
     </section>
     <!-- /Conatct -->
+
+    <!-- TODO: Create a modal directive -->
+    <!-- Project Modal. -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-modal">
+
+                        <!-- Prev Control -->
+                        <div class="project-modal-nav">
+                            <span>
+                                <span class="icon" ng-click="prev()">
+                                    <img src="images/left.png" srcset="images/left@2x.png 2x, images/left@3x.png 3x">
+                                </span>
+                            </span>
+                        </div>
+                        <!-- /Prev Control -->
+
+                        <div class="project-modal-info">
+                            <!-- Carousel -->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+
+                                <!-- /Slide Wrapper -->
+                                <div class="carousel-inner">
+                                    <div ng-class="{item: true, active: 0 === $index}" ng-repeat="project in projects">
+
+                                        <h3 class="project-modal-title">{{project.title}}</h3>
+                                        <p class="caption">{{project.description}}</p>
+                                        <div class="project-modal-image" ng-repeat="src in project.images">
+                                            <img ng-src="{{src}}" width="100%">
+                                            <p>
+                                                Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
+                                                If user which to read it, he or she can read it.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /Slide Warpper -->
+                            </div>
+                            <!-- /Carousel -->
+                        </div>
+
+                        <!-- Next Control -->
+                        <div class="project-modal-nav">
+                            <span>
+                                <span class="icon" ng-click="next()" role="button" data-slide="next">
+                                    <img src="images/right.png" srcset="images/right@2x.png 2x, images/right@3x.png 3x">
+                                </span>
+                            </span>
+                        </div>
+                        <!-- /Next Control -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Scripts -->
     <script type="text/javascript" src="dist/js/app.js"></script>

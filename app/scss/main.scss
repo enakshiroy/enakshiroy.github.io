@@ -21,6 +21,109 @@ body {
     }
 }
 
+//======= Overriding Bootstrap Modal =====.
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content {
+    height: 100%;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.modal-header {
+    padding: 15px 15px 5px 15px;
+    border-bottom: none;
+    .close {
+        color: $text-color;
+        opacity: 1;
+    }
+}
+
+.modal-body {
+    padding: 0;
+    height: 90%;
+    /* fallback if needed */
+    height: calc(100% - 39px);
+    overflow-y: auto;
+}
+
+// ======= Project modal ==========
+.project-modal {
+    display: flex;
+    height: 100%;
+    &-title {
+        font-size: 26px;
+        padding: 0;
+        margin: 0 0 22px;
+        font-weight: bold;
+    }
+    &-info {
+        flex-grow: 1;
+        overflow-y: auto;
+        text-align: center;
+        max-width: 854px;
+        margin-left: auto;
+        margin-right: auto;
+        .caption {
+            font-size: 26px;
+            margin: 0;
+        }
+        .text-link {
+            font-size: 16px;
+        }
+    }
+    &-nav {
+        @include flexCenter();
+        .icon {
+            background: white;
+            @include flexCenter();
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        &:first-child {
+            padding-left: 75px;
+        }
+        &:last-child {
+            padding-right: 75px;
+        }
+    }
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+// scroll bar style chrome
+// ::-webkit-scrollbar {
+//     width: 10px;
+//     height: 10px;
+//     &-track {
+//         background: $default-highlight-background;
+//         box-shadow: inset 0 0 5px $white-two;
+//         -webkit-box-shadow: inset 0 0 5px $white-two;
+//         border-radius: 10px;
+//         -webkit-border-radius: 10px;
+//         border: $default-border;
+//     }
+//     &-thumb {
+//         background: $default-border-color;
+//         border-radius: 10px;
+//         box-shadow: inset 0 0 5px $default-border-color;
+//         -webkit-border-radius: 10px;
+//         &:window-inactive {
+//             background: rgba($black, 0.1);
+//         }
+//     }
+//     &-corner {
+//         background: $default-highlight-background;
+//     }
+// }
 // CSS to remove ugly curly braces.
 [ng\:cloak],
 [ng-cloak],
@@ -285,6 +388,29 @@ body {
     margin-left: -50px;
     margin-right: -50px;
     padding: 141px 50px 221px 50px;
+    >.caption {
+        margin-top: 40px;
+        margin-bottom: 76px;
+    }
+    &-grid {
+        div[class*="col-"] {
+            margin: 0;
+            padding: 0;
+        }
+        &-item {
+            overflow: hidden;
+            margin-right: 40px;
+            margin-bottom: 60px;
+            &-thumbnail {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            >.caption {
+                margin-top: 10px;
+            }
+        }
+    }
 }
 
 // ================= Contact =================
