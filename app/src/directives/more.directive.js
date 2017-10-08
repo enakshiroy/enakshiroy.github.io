@@ -4,43 +4,46 @@ const moreDirective = ($timeout) => {
      * Returns the height of the supplied html.
      * @param {string} innerHTML 
      */
-    function getHeight(innerHTML) {
+    function getHeight(innerHTML, target = document.body) {
         let para = document.createElement('p');
         para.innerHTML = innerHTML;
-        para.className += 'info';
-        document.body.appendChild(para);
+        para.className += ' info';
+        target.appendChild(para);
         const height = para.offsetHeight;
         para.parentNode.removeChild(para);
         return `${height}px`;
     }
 
     function link($scope, element, attr) {
-
         const para = element[0].getElementsByTagName('p')[0];
+        let data = angular.copy($scope.data);
 
         // returns next information to be displayed.
-        const next = () => $scope.data.shift() || '';
+        const next = () => data.shift() || '';
 
-        // If no title use 'more' as default.
-        $scope.title = attr.title || 'More';
+        const init = () => {
+            angular.extend($scope, next());
+            para.style.height = getHeight($scope.text, element[0]);
+        };
 
         $scope.append = () => {
-            let text = next();
+            if (data.length === 0) {
+                data = angular.copy($scope.data);
+                init();
+                return;
+            }
+            let {
+                text,
+                more
+            } = next();
             if (!text) {
                 return;
             }
             $scope.text += `<br>${text}`;
-            para.style.height = getHeight($scope.text);
-            $timeout(() => {
-                if (!$scope.data.length) {
-                    $scope.moreStyle = {
-                        visibility: 'hidden'
-                    };
-                }
-            }, 200);
+            $scope.more = more;
+            para.style.height = getHeight($scope.text, element[0]);
         };
-        $scope.text = next();
-        para.style.height = getHeight($scope.text);
+        init();
     }
 
     return {
@@ -51,8 +54,8 @@ const moreDirective = ($timeout) => {
         },
         template: `
         <p ng-bind-html="text | unsafe" class="info"></p>
-        <a ng-style="moreStyle" class="text-link" href="javascript:void(0);" ng-click="append()">
-        {{title}}
+        <a ng-if="data.length > 1" class="text-link" href="javascript:void(0);" ng-click="append()">
+        {{more || 'More'}}
         </a>
         `
     };

@@ -7,7 +7,7 @@ const angular = require('angular');
 const app = angular.module('enakshi', []);
 
 // ugly hack to get jqiuery selector in directive.
-// TODO: Use broserify-shim.
+// TODO: Use broserify-shim
 app.constant('jQuery', jQuery);
 
 // add factories

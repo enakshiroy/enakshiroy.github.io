@@ -9,6 +9,8 @@ body {
     background-image: linear-gradient(-45deg, $gradient-bg-colors);
     animation: backgroundAnimation 10s linear infinite;
     padding: 71px; // border(21) + width(50)
+    padding-left: 171px;
+    padding-right: 171px;
 }
 
 @keyframes backgroundAnimation {
@@ -92,6 +94,9 @@ body {
         &:last-child {
             padding-right: 75px;
         }
+    }
+    &-image {
+        margin-bottom: 40px;
     }
 }
 
@@ -181,13 +186,15 @@ body {
 
 //=== All icons styling.
 .icon {
-    width: 66px;
-    height: 66px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
     border: none;
     position: relative;
+    background-size: contain;
+    background-position: center;
     &::after {
         top: -30px;
         position: absolute;
@@ -197,6 +204,12 @@ body {
         color: $text-color;
         opacity: 0;
         transition: all 0.5s linear;
+        font-size: 14px;
+        transition-delay: 0.5s;
+    }
+    &::before {
+        background-size: contain;
+        background-position: center;
     }
     &:hover {
         &::after,
@@ -223,7 +236,7 @@ body {
     &-call {
         background-image: url("../images/call.png");
         background-image: image-set( url("../images/call.png") 1x, url("../images/call@2x.png") 2x, url("../images/call@3x.png") 3x);
-        &:hover {
+        &::before {
             content: ' ';
             opacity: 0;
             height: 100%;
@@ -246,7 +259,7 @@ body {
             background-image: image-set( url("../images/deviant-art-er.png") 1x, url("../images/deviant-art-er@2x.png") 2x, url("../images/deviant-art-er@3x.png") 3x);
         }
         &::after {
-            content: 'Deviant';
+            content: 'DeviantArt';
         }
     }
     &-dribbble {
@@ -378,6 +391,7 @@ body {
         .info {
             transition: all 0.2s linear;
             overflow: hidden;
+            max-width: 600px;
         }
     }
 }
@@ -386,7 +400,7 @@ body {
 .nav {
     &-bar {
         // TODO: Adjust spacing accordingly.
-        padding-top: 93px;
+        // padding-top: 93px;
         >ul {
             list-style: none;
             display: flex;
@@ -411,8 +425,10 @@ body {
 
 // ====== Home ======
 .home {
-    padding-top: 141px;
-    padding-bottom: 186px;
+    // padding-top: 141px;
+    // padding-bottom: 186px;
+    padding-top: 50px;
+    padding-bottom: 0;
     >.title {
         margin-bottom: 14px;
     }
@@ -435,12 +451,15 @@ body {
 
 // ================= Work ===================
 .work {
-    background: white;
-    margin-left: -50px;
+    background: white; // margin-left: -50px;
+    // margin-right: -50px;
+    // padding: 141px 50px 221px 50px;
+    margin-left: -70px;
     margin-right: -50px;
-    padding: 141px 50px 221px 50px;
+    padding: 50px 50px 221px;
+    padding-left: 70px;
     >.caption {
-        margin-top: 40px;
+        // margin-top: 40px;
         margin-bottom: 76px;
     }
     &-grid {

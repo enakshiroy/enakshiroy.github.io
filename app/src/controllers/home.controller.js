@@ -1,10 +1,17 @@
 function HomeController($scope, ProjectFactory, jQuery) {
 
-    $scope.introData = [
-        'I&rsquo;m an independent (freelance/consulting) User Interface and<br>Experience Designer based in Bangalore, India.',
-        'This is dummy text. This will be replaced by actual text. <br> Will be replaced.',
-        'This is another dummy text. This will also be replaced by actualy text.<br> Will be replaced.',
-        'Blah blah blah'
+    $scope.introData = [{
+            text: 'I&rsquo;m an independent User Interface and Experience Designer based in Bangalore, India.',
+            more: 'More'
+        },
+        {
+            text: '<br>Primarily working with startups, I try to design beautiful, functional products and systems for businesses. I also believe in developing long-lasting relationships with my clients to ensure design plays its role as a great value-add to their products.',
+            more: 'Even More'
+        },
+        {
+            text: '<br>Umm, I also play the piano and draw medical stuff for fun. You’ll find me arguing with the many CEO’s I work with at their office spaces during the week, and usually a mountaintop on a weekend, questioning my existence.',
+            more: 'Okaaay then'
+        }
     ];
 
     /**
