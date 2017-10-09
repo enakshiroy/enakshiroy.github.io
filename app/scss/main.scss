@@ -199,6 +199,7 @@ $max-section-width: 958px;
     position: relative;
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     &::after {
         top: -30px;
         position: absolute;
@@ -214,6 +215,7 @@ $max-section-width: 958px;
     &::before {
         background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
     }
     &:hover {
         &::after,
