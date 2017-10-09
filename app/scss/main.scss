@@ -13,6 +13,7 @@ body {
     padding-right: 171px;
 }
 
+$max-section-width: 958px;
 @keyframes backgroundAnimation {
     0%,
     100% {
@@ -71,9 +72,10 @@ body {
         max-width: 854px;
         margin-left: auto;
         margin-right: auto;
-        .caption {
-            font-size: 26px;
+        text-align: center;
+        .info {
             margin: 0;
+            width: 100%;
         }
         .text-link {
             font-size: 16px;
@@ -182,6 +184,8 @@ body {
 
 .info {
     font-size: 18px;
+    font-size: 1.33333333em;
+    max-width: 600px;
 }
 
 //=== All icons styling.
@@ -391,7 +395,6 @@ body {
         .info {
             transition: all 0.2s linear;
             overflow: hidden;
-            max-width: 600px;
         }
     }
 }
@@ -423,15 +426,17 @@ body {
     }
 }
 
-// ====== Home ======
-.home {
-    // padding-top: 141px;
-    // padding-bottom: 186px;
-    padding-top: 50px;
-    padding-bottom: 0;
+.content-header {
     >.title {
         margin-bottom: 14px;
     }
+}
+
+// ====== Home ======
+.home {
+    padding-top: 50px;
+    max-width: 958px;
+    margin: auto;
     &-social {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -451,16 +456,16 @@ body {
 
 // ================= Work ===================
 .work {
-    background: white; // margin-left: -50px;
-    // margin-right: -50px;
-    // padding: 141px 50px 221px 50px;
-    margin-left: -70px;
-    margin-right: -50px;
-    padding: 50px 50px 221px;
-    padding-left: 70px;
-    >.caption {
-        // margin-top: 40px;
-        margin-bottom: 76px;
+    max-width: 958px;
+    margin: auto;
+    >section {
+        background: white;
+        margin-left: -70px;
+        margin-right: -50px;
+        padding: 50px 50px 50px 70px;
+    }
+    .content-header {
+        margin-bottom: 40px;
     }
     &-grid {
         div[class*="col-"] {
@@ -469,8 +474,8 @@ body {
         }
         &-item {
             overflow: hidden;
-            margin-right: 40px;
-            margin-bottom: 60px;
+            margin-right: 13px;
+            margin-bottom: 40px;
             &-thumbnail {
                 &:hover {
                     cursor: pointer;
@@ -485,13 +490,14 @@ body {
 
 // ================= Contact =================
 .contact {
-    padding-top: 141px;
-    padding-bottom: 221px;
-    .info {
-        margin-top: 40px;
-        margin-bottom: 47px;
+    padding-top: 50px;
+    max-width: 958px;
+    margin: auto;
+    >.content-header {
+        margin-bottom: 40px;
     }
     &-info {
+        padding-bottom: 133px;
         &-item {
             display: flex;
             align-items: center;

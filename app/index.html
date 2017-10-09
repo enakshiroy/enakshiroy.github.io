@@ -53,12 +53,13 @@
 
     <!-- Introduction -->
     <section class="home" id="home">
-
+        <header class="content-header">
+            <h1 class="title">
+                Hello, I&rsquo;m Enakshi
+            </h1>
+            <more class="text-link-more" data="introData"></more>
+        </header>
         <!-- title -->
-        <h1 class="title">
-            Hello, I&rsquo;m Enakshi
-        </h1>
-        <more class="text-link-more" data="introData"></more>
 
         <!-- Social Navigation link -->
         <nav class="home-social" ng-cloak shoot-menu>
@@ -110,43 +111,50 @@
     <!-- /Home -->
 
     <section id="work" class="work">
-        <h1 class="title">I design interfaces for web and mobile</h1>
-        <p class="caption">
-            I specialise in designing for digital interfaces, a few samples of which <br> are showcased below. My resume
-            can be found <a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a>.
-        </p>
-        <!-- Project Grid -->
-        <section class="work-grid">
-            <section class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in projects">
-                        <div class="work-grid-item">
-                            <img class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="350px" height="350px"
-                                data-toggle="modal" data-target="#projectModal">
-                            <p class="caption">{{project.title}}</p>
+        <section>
+            <header class="content-header">
+                <h1 class="title">I design interfaces for web and mobile</h1>
+                <p class="info">
+                    I specialise in designing for digital interfaces, a few samples of which are showcased below. My resume can be found
+                    <strong><a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a></strong>.
+                </p>
+            </header>
+            <!-- Project Grid -->
+            <section class="work-grid">
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6" ng-repeat="project in projects">
+                            <div class="work-grid-item">
+                                <img class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="100%" data-toggle="modal"
+                                    data-target="#projectModal">
+                                <p class="info">{{project.title}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
+            <!-- /Project Grid -->
+            <p class="info">Everything else is showcased on my <strong><a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a></strong>.</p>
+
         </section>
-        <!-- /Project Grid -->
+
     </section>
 
 
     <!-- Contact -->
     <section class="contact" id="contact">
 
+        <header class="content-header">
+            <!-- title -->
+            <h1 class="title">
+                Call me maybe
+            </h1>
 
-        <!-- title -->
-        <h1 class="title">
-            Call me maybe
-        </h1>
-
-        <!-- caption -->
-        <p class="info">
-            Email is the best way to get in touch. You're welcome to call me, but
-            <br> only if you're giving away free sushi.
-        </p>
+            <!-- caption -->
+            <p class="info">
+                Email is the best way to get in touch. <i>You're welcome to call me, but only if you're giving away free sushi</i>.
+            </p>
+        </header>
 
         <nav class="contact-info">
             <ul class="list-unstyled">
@@ -163,6 +171,7 @@
                 </li>
             </ul>
         </nav>
+        <i>Thank you for stopping by! 🍣</i>
     </section>
     <!-- /Conatct -->
 
@@ -177,50 +186,17 @@
                 <div class="modal-body">
                     <div class="project-modal">
 
-                        <!-- Prev Control -->
-                        <div class="project-modal-nav">
-                            <span>
-                                <span class="icon" ng-click="prev()">
-                                    <img src="images/left.png" srcset="images/left@2x.png 2x, images/left@3x.png 3x">
-                                </span>
-                            </span>
-                        </div>
-                        <!-- /Prev Control -->
-
                         <div class="project-modal-info">
-                            <!-- Carousel -->
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
-
-                                <!-- /Slide Wrapper -->
-                                <div class="carousel-inner">
-                                    <div ng-class="{item: true, active: 0 === $index}" ng-repeat="project in projects">
-
-                                        <h3 class="project-modal-title">{{project.title}}</h3>
-                                        <p class="caption">{{project.description}}</p>
-                                        <div class="project-modal-image" ng-repeat="src in project.images">
-                                            <img ng-src="{{src}}" width="100%">
-                                            <p>
-                                                Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
-                                                If user which to read it, he or she can read it.
-                                            </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <!-- /Slide Warpper -->
+                            <h3 class="project-modal-title">{{selectedProject.title}}</h3>
+                            <p class="info">{{selectedProject.description}}</p>
+                            <div class="project-modal-image" ng-repeat="src in selectedProject.images">
+                                <img ng-src="{{src}}" width="100%">
+                                <p>
+                                    Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
+                                    If user which to read it, he or she can read it.
+                                </p>
                             </div>
-                            <!-- /Carousel -->
                         </div>
-
-                        <!-- Next Control -->
-                        <div class="project-modal-nav">
-                            <span>
-                                <span class="icon" ng-click="next()" role="button" data-slide="next">
-                                    <img src="images/right.png" srcset="images/right@2x.png 2x, images/right@3x.png 3x">
-                                </span>
-                            </span>
-                        </div>
-                        <!-- /Next Control -->
                     </div>
                 </div>
             </div>

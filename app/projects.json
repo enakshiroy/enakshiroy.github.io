@@ -9,7 +9,7 @@
             "https://unsplash.it/350/?gravity=south",
             "https://unsplash.it/g/854"
         ],
-        "description": "first level description for the project",
+        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
         "description_more": "more detail about the project"
     },
     {
@@ -23,7 +23,7 @@
             "https://unsplash.it/350/?gravity=south",
             "https://unsplash.it/g/854"
         ],
-        "description": "first level description for the project",
+        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
         "description_more": "more detail about the project"
     },
     {
@@ -37,7 +37,7 @@
             "https://unsplash.it/350/?gravity=south",
             "https://unsplash.it/g/854"
         ],
-        "description": "first level description for the project",
+        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
         "description_more": "more detail about the project"
     },
     {
@@ -51,77 +51,7 @@
             "https://unsplash.it/350/?gravity=south",
             "https://unsplash.it/g/854"
         ],
-        "description": "first level description for the project",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 5",
-        "thumbnail": "https://unsplash.it/350/350/?gravity=south",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "first level description for the project",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 6",
-        "thumbnail": "https://unsplash.it/g/350x350",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "first level description for the project",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 7",
-        "thumbnail": "https://unsplash.it/350/350?image=1068",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "first level description for the project",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 8",
-        "thumbnail": "https://unsplash.it/350/350?image=1060",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "first level description for the project",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 9",
-        "thumbnail": "https://source.unsplash.com/random/350x350",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "first level description for the project",
+        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
         "description_more": "more detail about the project"
     }
 ]

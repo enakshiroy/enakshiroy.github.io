@@ -32,21 +32,10 @@ function HomeController($scope, ProjectFactory, jQuery) {
      */
     $scope.projects = [];
 
-    $scope.select = (project) => {
-        const modal = jQuery('#myCarousel');
-        const index = $scope.projects.indexOf(project);
-        modal.carousel(index);
-    };
+    $scope.selectedProject = null;
 
-    $scope.next = () => {
-        // TODO: Create directive.
-        const modal = jQuery('#myCarousel');
-        modal.carousel('next');
-    };
-    $scope.prev = () => {
-        // TODO: Create directive.
-        const modal = jQuery('#myCarousel');
-        modal.carousel('prev');
+    $scope.select = (project) => {
+        $scope.selectedProject = project;
     };
 
     // All set. Let's invoke onLoad.
