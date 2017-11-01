@@ -1,63 +1,66 @@
 <div class="home">
-    <!-- Introduction header -->
-    <h1 class="home-intro">
-        Hello, I&rsquo;m Enakshi
-    </h1>
-    <!-- Description -->
-    <p class="home-caption">
-        I&rsquo;m a user interface and experience designer<br> in Banglore, India.
-    </p>
+    <section class="home-info">
+        <h1 class="title">Hello, I'm Enakshi</h1>
+        <p>
+            I'm an independent
+            <a href="javascript:void 0;">User Interface and Experience Designer</a> based in Bangalore, India.
+        </p>
+        <p>
+            Primarily engaging with startups, I try to design
+            <a href="javascript:void 0;">beautiful, functional products and systems</a>. I believe in developing long-lasting relationships with my clients
+            to ensure design plays its role as a great
+            <a href="javascript:void 0;">value-add</a> to their businesses.
+        </p>
+        <p>
+            I would love to hear from you over
+            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">email</a>.
+        </p>
 
-    <!-- Social Navigation menu -->
-    <nav class="home-social ">
-        <ul class="social list-unstyled">
-            <!-- Behace -->
-            <li class="social-item">
-                <a href="https://www.behance.net/enakshi" target="_blank">
-                    <img src="images/behance-enakshi.png"
-                    srcset="images/behance-enakshi@2x.png 2x, images/behance-enakshi@3x.png 3x">
-                </a>
-            </li>
+        <!-- Social Navigation link -->
+        <nav class="home-social" ng-cloak shoot-menu>
 
-            <!-- Linked in -->
-            <li class="social-item">
-                <a href="https://www.linkedin.com/in/enakshiroy" target="_blank">
-                    <img src="images/linkedin-enakshi.png"
-                    srcset="images/linkedin-enakshi@2x.png 2x, images/linkedin-enakshi@3x.png 3x">
+            <!-- Behance -->
+            <div class="home-social-link">
+                <a class="icon icon-behance" href="https://www.behance.net/enakshi" target="_blank">
                 </a>
-            </li>
+            </div>
 
-            <!-- Email -->
-            <li class="social-item">
-                <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
-                    <img src="images/email-enakshi.png "
-                    srcset="images/email-enakshi@2x.png 2x, images/email-enakshi@3x.png 3x">
-                </a>
-            </li>
-
-            <!-- More -->
-            <li class="social-item" ng-click="expand()" ng-if="!isExpanded">
-                <a>
-                    <img src="images/more.png "
-                    srcset="images/more@2x.png 2x, images/more@3x.png 3x">
-                </a>
-            </li>
+            <!-- Linked In -->
+            <div class="home-social-link">
+                <a class="icon icon-linkedin" href="https://www.linkedin.com/in/enakshiroy" target="_blank"></a>
+            </div>
 
             <!-- Dribble -->
-            <li class="social-item" ng-if="isExpanded">
-                <a href="https://dribbble.com/enakshi" target="_blank">
-                    <img src="images/enakshi-dribbble.png"
-                    srcset="images/enakshi-dribbble@2x.png 2x, images/enakshi-dribbble@3x.png 3x">
-                </a>
-            </li>
+            <div class="home-social-link">
+                <a class="icon icon-dribbble" href="https://dribbble.com/enakshi" target="_blank"></a>
+            </div>
 
-            <!-- Phone Call -->
-            <li class="social-item" ng-if="isExpanded">
-                <a href="tel:888-491-2798" target="_top">
-                    <img src="images/linkedin-enakshi.png"
-                    srcset="images/linkedin-enakshi@2x.png 2x, images/linkedin-enakshi@3x.png 3x">
-                </a>
-            </li>
-        </ul>
-    </nav>
+            <!-- More -->
+            <div class="home-social-link shoot-menu-trigger">
+                <a class="icon icon-etc" href="javascript: void(0);"></a>
+            </div>
+
+            <!-- Facebook -->
+            <div class="home-social-link">
+                <a class="icon icon-facebook" href="https://www.facebook.com/enakshi.roy" target="_blank"></a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="home-social-link">
+                <a class="icon icon-instagram" href="https://www.instagram.com/enakshizz/" target="_blank"></a>
+            </div>
+
+            <!-- Deviant Art -->
+            <div class="home-social-link">
+                <a class="icon icon-deviant" href="https://craproy.deviantart.com/" target="_blank"></a>
+            </div>
+
+            <!-- Tumblr -->
+            <div class="home-social-link">
+                <a class="icon icon-tumblr" href="javascript: alert('No link provided!');" target="_blank"></a>
+            </div>
+    </section>
+    <section class="home-meme">
+        <img width="304" alt="" src="https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/C93A7A0B-9ACB-4EA8-A61F-1C412926601C.png">
+    </section>
 </div>

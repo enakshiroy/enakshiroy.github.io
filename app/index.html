@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <!-- <base href="#"> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:url" content="http://www.enakshiroy.com" />
@@ -19,190 +20,23 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
-<body ng-strict-di ng-app="enakshi" ng-controller="HomeController">
+<body ng-strict-di ng-app="enakshi" class="container" ng-cloak>
 
-    <!-- Borders for the body -->
-    <div class="bd-border bd-border-left"></div>
-    <div class="bd-border bd-border-right"></div>
-    <div class="bd-border bd-border-top"></div>
-    <div class="bd-border bd-border-bottom"></div>
-
-    <!-- Header with navigations -->
     <header>
-
         <nav class="nav-bar">
-            <ul class="list-unstyled">
-                <li class="nav-item">
-                    <a href="javascript:void(0);" class="text-link" scroll-to="home" duration="500">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:void(0);" class="text-link" scroll-to="work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="javascript:void(0);" class="text-link" scroll-to="contact">Contact</a>
-                </li>
-            </ul>
+            <a class="nav-bar-link" ng-class="{'nav-bar-link-active': isActive('/')}" href="#">Home</a>
+            <a class="nav-bar-link" ng-class="{'nav-bar-link-active': isActive('/work')}" href="#/work">Work</a>
+            <a class="nav-bar-link" href="../enakshi_roy.pdf" target="_blank">Resume</a>
         </nav>
-
     </header>
-    <!-- /Navigation -->
 
+    <main>
+        <ng-view></ng-view>
+    </main>
 
-    <!-- Home -->
-
-
-    <!-- Introduction -->
-    <section class="home" id="home">
-        <header class="content-header">
-            <h1 class="title">
-                Hello, I&rsquo;m Enakshi
-            </h1>
-            <more class="text-link-more" data="introData"></more>
-        </header>
-        <!-- title -->
-
-        <!-- Social Navigation link -->
-        <nav class="home-social" ng-cloak shoot-menu>
-
-            <!-- Behance -->
-            <div class="home-social-link">
-                <a class="icon icon-behance" href="https://www.behance.net/enakshi" target="_blank">
-                </a>
-            </div>
-
-            <!-- Linked In -->
-            <div class="home-social-link">
-                <a class="icon icon-linkedin" href="https://www.linkedin.com/in/enakshiroy" target="_blank"></a>
-            </div>
-
-            <!-- Dribble -->
-            <div class="home-social-link">
-                <a class="icon icon-dribbble" href="https://dribbble.com/enakshi" target="_blank"></a>
-            </div>
-
-            <!-- More -->
-            <div class="home-social-link shoot-menu-trigger">
-                <a class="icon icon-etc" href="javascript: void(0);"></a>
-            </div>
-
-            <!-- Facebook -->
-            <div class="home-social-link">
-                <a class="icon icon-facebook" href="https://www.facebook.com/enakshi.roy" target="_blank"></a>
-            </div>
-
-            <!-- Instagram -->
-            <div class="home-social-link">
-                <a class="icon icon-instagram" href="https://www.instagram.com/enakshizz/" target="_blank"></a>
-            </div>
-
-            <!-- Deviant Art -->
-            <div class="home-social-link">
-                <a class="icon icon-deviant" href="https://craproy.deviantart.com/" target="_blank"></a>
-            </div>
-
-            <!-- Tumblr -->
-            <div class="home-social-link">
-                <a class="icon icon-tumblr" href="javascript: alert('No link provided!');" target="_blank"></a>
-            </div>
-
-        </nav>
-
-    </section>
-    <!-- /Home -->
-
-    <section id="work" class="work">
-        <section>
-            <header class="content-header">
-                <h1 class="title">I design interfaces for web and mobile</h1>
-                <p class="info">
-                    I specialise in designing for digital interfaces, a few samples of which are showcased below. My resume can be found
-                    <strong><a href="../enakshi_roy.pdf" target="_blank" class="text-link bold-type">here</a></strong>.
-                </p>
-            </header>
-            <!-- Project Grid -->
-            <section class="work-grid">
-                <section class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6" ng-repeat="project in projects">
-                            <div class="work-grid-item">
-                                <img class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="100%" data-toggle="modal"
-                                    data-target="#projectModal">
-                                <p class="info">{{project.title}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <!-- /Project Grid -->
-            <p class="info">Everything else is showcased on my <strong><a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a></strong>.</p>
-
-        </section>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <header class="content-header">
-            <!-- title -->
-            <h1 class="title">
-                Call me maybe
-            </h1>
-
-            <!-- caption -->
-            <p class="info">
-                Email is the best way to get in touch. <i>You're welcome to call me, but only if you're giving away free sushi</i>.
-            </p>
-        </header>
-
-        <nav class="contact-info">
-            <ul class="list-unstyled">
-                <!-- Mail -->
-                <li class="contact-info-item">
-                    <a class="icon icon-email" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top"></a>
-                    <a class="text-link" href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">enakshi249@gmail.com</a>
-                </li>
-
-                <!-- Call -->
-                <li class="contact-info-item">
-                    <a class="icon icon-call" href="tel:888-491-2798" target="_top"></a>
-                    <a class="text-link" href="tel:888-491-2798" target="_top">+91 888 491 2798</a>
-                </li>
-            </ul>
-        </nav>
-        <i>Thank you for stopping by! 🍣</i>
-    </section>
-    <!-- /Conatct -->
-
-    <!-- TODO: Create a modal directive -->
-    <!-- Project Modal. -->
-    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="project-modal">
-
-                        <div class="project-modal-info">
-                            <h3 class="project-modal-title">{{selectedProject.title}}</h3>
-                            <p class="info">{{selectedProject.description}}</p>
-                            <div class="project-modal-image" ng-repeat="src in selectedProject.images">
-                                <img ng-src="{{src}}" width="100%">
-                                <p>
-                                    Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
-                                    If user which to read it, he or she can read it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <footer>
+        Footer goes here.
+    </footer>
 
     <!-- Scripts -->
     <script type="text/javascript" src="dist/js/app.js"></script>

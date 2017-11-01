@@ -4,11 +4,48 @@ require('bootstrap');
 jQuery.noConflict(true);
 
 const angular = require('angular');
-const app = angular.module('enakshi', []);
+const app = angular.module('enakshi', [
+    require('angular-route')
+]);
 
 // ugly hack to get jqiuery selector in directive.
 // TODO: Use broserify-shim
 app.constant('jQuery', jQuery);
+app.constant('Routes', require('./routes'));
+
+// config module with routes.
+(() => {
+    function config($routeProvider, $locationProvider, Routes) {
+        // TODO: Remove this ugly hack and load tempalte gracefully.
+        const base = '../';
+        Routes.forEach(({
+            url,
+            templateUrl,
+            controller
+        }) => {
+            templateUrl = `${base}${templateUrl}`;
+            $routeProvider.when(url, {
+                templateUrl,
+                controller
+            });
+        });
+        // redirect to default router i.e. Home Page.
+        $routeProvider.otherwise({
+            redirectTo: '/'
+        });
+        $locationProvider.hashPrefix('');
+        // configure html5 to get links working on jsfiddle
+        // $locationProvider.html5Mode({
+        //     enabled: false
+        // });
+    }
+    app.config([
+        '$routeProvider',
+        '$locationProvider',
+        'Routes',
+        config
+    ]);
+})();
 
 // add factories
 (() => {
@@ -48,19 +85,27 @@ app.constant('jQuery', jQuery);
     }) => app.controller(name, controller));
 })();
 
+// run 
+(() => {
+    function run($rootScope, $location) {
+        $rootScope.isActive = viewLocation => viewLocation === $location.path();
+    }
+    app.run(['$rootScope', '$location', run])
+})();
+
 
 // on load.
-(() => {
-    window.onload = () => {
-        const modal = jQuery('#projectModal');
-        const toggleBlur = () => {
-            const containers = jQuery('body > section');
-            containers.each((index, value) => {
-                jQuery(value).toggleClass('blur');
-            });
-        };
-        // toggle blur on sho an hide.
-        modal.on('hidden.bs.modal', toggleBlur);
-        modal.on('shown.bs.modal', toggleBlur);
-    };
-})();
+// (() => {
+//     window.onload = () => {
+//         const modal = jQuery('#projectModal');
+//         const toggleBlur = () => {
+//             const containers = jQuery('body > section');
+//             containers.each((index, value) => {
+//                 jQuery(value).toggleClass('blur');
+//             });
+//         };
+//         // toggle blur on sho an hide.
+//         modal.on('hidden.bs.modal', toggleBlur);
+//         modal.on('shown.bs.modal', toggleBlur);
+//     };
+// })();
