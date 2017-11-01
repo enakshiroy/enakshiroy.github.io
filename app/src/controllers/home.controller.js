@@ -42,6 +42,7 @@ function HomeController($scope, ProjectFactory, jQuery) {
             src: `https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/C93A7A0B-9ACB-4EA8-A61F-1C412926601C.png`
         }
     ];
+    $scope.activeMeme = 0;
 
     $scope.selectedProject = null;
 
