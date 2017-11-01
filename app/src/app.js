@@ -17,13 +17,14 @@ app.constant('Routes', require('./routes'));
 (() => {
     function config($routeProvider, $locationProvider, Routes) {
         // TODO: Remove this ugly hack and load tempalte gracefully.
-        const base = '../';
+        // const base = '../';
+        // const base = '';
         Routes.forEach(({
             url,
             templateUrl,
             controller
         }) => {
-            templateUrl = `${base}${templateUrl}`;
+            // templateUrl = `${base}${templateUrl}`;
             $routeProvider.when(url, {
                 templateUrl,
                 controller
