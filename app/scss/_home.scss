@@ -42,5 +42,14 @@
     }
     &-meme {
         margin-left: 140px;
+        position: relative;
+        img {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.3s linear;
+        }
+        &-active {
+            opacity: 1 !important;
+        }
     }
 }

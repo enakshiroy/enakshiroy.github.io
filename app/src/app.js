@@ -16,15 +16,11 @@ app.constant('Routes', require('./routes'));
 // config module with routes.
 (() => {
     function config($routeProvider, $locationProvider, Routes) {
-        // TODO: Remove this ugly hack and load tempalte gracefully.
-        // const base = '../';
-        // const base = '';
         Routes.forEach(({
             url,
             templateUrl,
             controller
         }) => {
-            // templateUrl = `${base}${templateUrl}`;
             $routeProvider.when(url, {
                 templateUrl,
                 controller
@@ -35,10 +31,6 @@ app.constant('Routes', require('./routes'));
             redirectTo: '/'
         });
         $locationProvider.hashPrefix('');
-        // configure html5 to get links working on jsfiddle
-        // $locationProvider.html5Mode({
-        //     enabled: false
-        // });
     }
     app.config([
         '$routeProvider',

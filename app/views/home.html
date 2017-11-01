@@ -3,13 +3,13 @@
         <h1 class="title">Hello, I'm Enakshi</h1>
         <p>
             I'm an independent
-            <a href="javascript:void 0;">User Interface and Experience Designer</a> based in Bangalore, India.
+            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 0;" ng-mouseleave="activeMeme= -1;">User Interface and Experience Designer</a> based in Bangalore, India.
         </p>
         <p>
             Primarily engaging with startups, I try to design
-            <a href="javascript:void 0;">beautiful, functional products and systems</a>. I believe in developing long-lasting relationships with my clients
+            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 1;" ng-mouseleave="activeMeme= -1;">beautiful, functional products and systems</a>. I believe in developing long-lasting relationships with my clients
             to ensure design plays its role as a great
-            <a href="javascript:void 0;">value-add</a> to their businesses.
+            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 2;" ng-mouseleave="activeMeme= -1;">value-add</a> to their businesses.
         </p>
         <p>
             I would love to hear from you over
@@ -61,6 +61,9 @@
             </div>
     </section>
     <section class="home-meme">
-        <img width="304" alt="" src="https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/C93A7A0B-9ACB-4EA8-A61F-1C412926601C.png">
+        <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes">
+        <!-- <img width="304" alt="" src="http://www.tidy-mind.com/wp-content/uploads/2013/06/2013-06-25_142513-624x459.png">
+        <img width="304" alt="" src="https://s-media-cache-ak0.pinimg.com/originals/ac/b4/63/acb463cb6c220575691c034a85c818d2.jpg">
+        <img width="304" alt="" src="https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/C93A7A0B-9ACB-4EA8-A61F-1C412926601C.png"> -->
     </section>
 </div>
