@@ -4,6 +4,24 @@
 @import "./_typography";
 @import "./_home";
 @import "./_work";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // Required for sticky footer.
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex: 1 0 auto;
+  }
+  > footer {
+    margin-bottom: 100px;
+  }
+}
+
 // CSS to remove ugly curly braces.
 [ng\:cloak],
 [ng-cloak],
@@ -11,237 +29,323 @@
 [x-ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
-    display: none !important;
+  display: none !important;
 }
 
 // Anchor tag.
 a {
-    &:link,
-    &:active,
-    &:visited,
-    &:hover {
-        color: $text-color;
-        font-size: $font-size-base;
-        text-decoration: none;
-    }
-    &:hover,
-    &:active {
-        border-bottom: $default-bottom-border;
-    }
+  &:link,
+  &:active,
+  &:visited {
+    color: $text-color;
+    font-size: $font-size-base;
+    text-decoration: none;
+    border-bottom: $default-bottom-border;
+  }
+  &:hover {
+    background-color: $text-color;
+    color: white;
+  }
 }
 
 // Top header nav bar.
 .nav-bar {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 71px;
-    margin-bottom: 75px;
-    &-link {
-        margin-right: 15px;
-        padding-bottom: 5px;
-        &:last-child {
-            margin-right: 0;
-        }
-        &-active {
-            border-bottom: $default-bottom-border;
-        }
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 71px;
+  margin-bottom: 75px;
+  &-link {
+    margin-right: 15px;
+    padding-bottom: 5px;
+    border-bottom: 0 !important;
+    &:last-child {
+      margin-right: 0;
     }
-}
-
-.title {
-    font-size: 42px;
-    font-weight: 900;
-    font-family: Butler_Black_Stencil;
+    &-active {
+      border-bottom: $default-bottom-border !important;
+    }
+  }
 }
 
 //=== All icons styling.
 .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: inline-block;
-    border: none;
-    position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  &::after {
+    top: -30px;
+    position: absolute;
+    content: " ";
+    width: 200%;
+    text-align: center;
+    color: $text-color;
+    opacity: 0;
+    transition: all 0.5s linear;
+    font-size: 14px;
+    transition-delay: 0.5s;
+    left: -50%;
+  }
+  &::before {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    &::after {
-        top: -30px;
-        position: absolute;
-        content: ' ';
-        width: 200%;
-        text-align: center;
-        color: $text-color;
-        opacity: 0;
-        transition: all 0.5s linear;
-        font-size: 14px;
-        transition-delay: 0.5s;
-        left: -50%;
-    }
+  }
+  &:hover {
+    background-color: transparent;
+    &::after,
     &::before {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+      opacity: 1;
     }
-    &:hover {
-        &::after,
-        &::before {
-            opacity: 1;
-        }
+  }
+  &-behance {
+    background-image: url("../images/behance.png");
+    background-image: image-set(
+      url("../images/behance.png") 1x,
+      url("../images/behance@2x.png") 2x,
+      url("../images/behance@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/behance-er.png");
+      background-image: image-set(
+        url("../images/behance-er.png") 1x,
+        url("../images/behance-er@2x.png") 2x,
+        url("../images/behance-er@3x.png") 3x
+      );
     }
-    &-behance {
-        background-image: url("../images/behance.png");
-        background-image: image-set( url("../images/behance.png") 1x, url("../images/behance@2x.png") 2x, url("../images/behance@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/behance-er.png");
-            background-image: image-set( url("../images/behance-er.png") 1x, url("../images/behance-er@2x.png") 2x, url("../images/behance-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Behance';
-        }
+    &::after {
+      content: "Behance";
     }
-    &-call {
-        background-image: url("../images/call.png");
-        background-image: image-set( url("../images/call.png") 1x, url("../images/call@2x.png") 2x, url("../images/call@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/call-er.png");
-            background-image: image-set( url("../images/call-er.png") 1x, url("../images/call-er@2x.png") 2x, url("../images/call-er@3x.png") 3x);
-        }
+  }
+  &-call {
+    background-image: url("../images/call.png");
+    background-image: image-set(
+      url("../images/call.png") 1x,
+      url("../images/call@2x.png") 2x,
+      url("../images/call@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/call-er.png");
+      background-image: image-set(
+        url("../images/call-er.png") 1x,
+        url("../images/call-er@2x.png") 2x,
+        url("../images/call-er@3x.png") 3x
+      );
     }
-    &-deviant {
-        background-image: url("../images/deviant-art.png");
-        background-image: image-set( url("../images/deviant-art.png") 1x, url("../images/deviant-art@2x.png") 2x, url("../images/deviant-art@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/deviant-art-er.png");
-            background-image: image-set( url("../images/deviant-art-er.png") 1x, url("../images/deviant-art-er@2x.png") 2x, url("../images/deviant-art-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'DeviantArt';
-        }
+  }
+  &-deviant {
+    background-image: url("../images/deviant-art.png");
+    background-image: image-set(
+      url("../images/deviant-art.png") 1x,
+      url("../images/deviant-art@2x.png") 2x,
+      url("../images/deviant-art@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/deviant-art-er.png");
+      background-image: image-set(
+        url("../images/deviant-art-er.png") 1x,
+        url("../images/deviant-art-er@2x.png") 2x,
+        url("../images/deviant-art-er@3x.png") 3x
+      );
     }
-    &-dribbble {
-        background-image: url("../images/dribbble.png");
-        background-image: image-set( url("../images/dribbble.png") 1x, url("../images/dribbble@2x.png") 2x, url("../images/dribbble@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/dribbble-er.png");
-            background-image: image-set( url("../images/dribbble-er.png") 1x, url("../images/dribbble-er@2x.png") 2x, url("../images/dribbble-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Dribbble';
-        }
+    &::after {
+      content: "DeviantArt";
     }
-    &-email {
-        background-image: url("../images/email.png");
-        background-image: image-set( url("../images/email.png") 1x, url("../images/email@2x.png") 2x, url("../images/email@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/email-er.png");
-            background-image: image-set( url("../images/email-er.png") 1x, url("../images/email-er@2x.png") 2x, url("../images/email-er@3x.png") 3x);
-        }
+  }
+  &-dribbble {
+    background-image: url("../images/dribbble.png");
+    background-image: image-set(
+      url("../images/dribbble.png") 1x,
+      url("../images/dribbble@2x.png") 2x,
+      url("../images/dribbble@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/dribbble-er.png");
+      background-image: image-set(
+        url("../images/dribbble-er.png") 1x,
+        url("../images/dribbble-er@2x.png") 2x,
+        url("../images/dribbble-er@3x.png") 3x
+      );
     }
-    &-etc {
-        background-image: url("../images/etc.png");
-        background-image: image-set( url("../images/etc.png") 1x, url("../images/etc@2x.png") 2x, url("../images/etc@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/etc-er.png");
-            background-image: image-set( url("../images/etc-er.png") 1x, url("../images/etc-er@2x.png") 2x, url("../images/etc-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'More';
-        }
+    &::after {
+      content: "Dribbble";
     }
-    &-facebook {
-        background-image: url("../images/fb.png");
-        background-image: image-set( url("../images/fb.png") 1x, url("../images/fb@2x.png") 2x, url("../images/fb@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/fb-er.png");
-            background-image: image-set( url("../images/fb-er.png") 1x, url("../images/fb-er@2x.png") 2x, url("../images/fb-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Facebook';
-        }
+  }
+  &-email {
+    background-image: url("../images/email.png");
+    background-image: image-set(
+      url("../images/email.png") 1x,
+      url("../images/email@2x.png") 2x,
+      url("../images/email@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/email-er.png");
+      background-image: image-set(
+        url("../images/email-er.png") 1x,
+        url("../images/email-er@2x.png") 2x,
+        url("../images/email-er@3x.png") 3x
+      );
     }
-    &-instagram {
-        background-image: url("../images/instagram_2.png");
-        background-image: image-set( url("../images/instagram_2.png") 1x, url("../images/instagram_2@2x.png") 2x, url("../images/instagram_2@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/insta-er.png");
-            background-image: image-set( url("../images/insta-er.png") 1x, url("../images/insta-er@2x.png") 2x, url("../images/insta-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Instagram';
-        }
+  }
+  &-etc {
+    background-image: url("../images/etc.png");
+    background-image: image-set(
+      url("../images/etc.png") 1x,
+      url("../images/etc@2x.png") 2x,
+      url("../images/etc@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/etc-er.png");
+      background-image: image-set(
+        url("../images/etc-er.png") 1x,
+        url("../images/etc-er@2x.png") 2x,
+        url("../images/etc-er@3x.png") 3x
+      );
     }
-    &-linkedin {
-        background-image: url("../images/linkedin.png");
-        background-image: image-set( url("../images/linkedin.png") 1x, url("../images/linkedin@2x.png") 2x, url("../images/linkedin@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/linkedin-er.png");
-            background-image: image-set( url("../images/linkedin-er.png") 1x, url("../images/linkedin-er@2x.png") 2x, url("../images/linkedin-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Linkedin';
-        }
+    &::after {
+      content: "More";
     }
-    &-tumblr {
-        background-image: url("../images/tumblr.png");
-        background-image: image-set( url("../images/tumblr.png") 1x, url("../images/tumblr@2x.png") 2x, url("../images/tumblr@3x.png") 3x);
-        &::before {
-            content: ' ';
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/tumblr-er.png");
-            background-image: image-set( url("../images/tumblr-er.png") 1x, url("../images/tumblr-er@2x.png") 2x, url("../images/tumblr-er@3x.png") 3x);
-        }
-        &::after {
-            content: 'Tumblr';
-        }
+  }
+  &-facebook {
+    background-image: url("../images/fb.png");
+    background-image: image-set(
+      url("../images/fb.png") 1x,
+      url("../images/fb@2x.png") 2x,
+      url("../images/fb@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/fb-er.png");
+      background-image: image-set(
+        url("../images/fb-er.png") 1x,
+        url("../images/fb-er@2x.png") 2x,
+        url("../images/fb-er@3x.png") 3x
+      );
     }
+    &::after {
+      content: "Facebook";
+    }
+  }
+  &-instagram {
+    background-image: url("../images/instagram_2.png");
+    background-image: image-set(
+      url("../images/instagram_2.png") 1x,
+      url("../images/instagram_2@2x.png") 2x,
+      url("../images/instagram_2@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/insta-er.png");
+      background-image: image-set(
+        url("../images/insta-er.png") 1x,
+        url("../images/insta-er@2x.png") 2x,
+        url("../images/insta-er@3x.png") 3x
+      );
+    }
+    &::after {
+      content: "Instagram";
+    }
+  }
+  &-linkedin {
+    background-image: url("../images/linkedin.png");
+    background-image: image-set(
+      url("../images/linkedin.png") 1x,
+      url("../images/linkedin@2x.png") 2x,
+      url("../images/linkedin@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/linkedin-er.png");
+      background-image: image-set(
+        url("../images/linkedin-er.png") 1x,
+        url("../images/linkedin-er@2x.png") 2x,
+        url("../images/linkedin-er@3x.png") 3x
+      );
+    }
+    &::after {
+      content: "Linkedin";
+    }
+  }
+  &-tumblr {
+    background-image: url("../images/tumblr.png");
+    background-image: image-set(
+      url("../images/tumblr.png") 1x,
+      url("../images/tumblr@2x.png") 2x,
+      url("../images/tumblr@3x.png") 3x
+    );
+    &::before {
+      content: " ";
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("../images/tumblr-er.png");
+      background-image: image-set(
+        url("../images/tumblr-er.png") 1x,
+        url("../images/tumblr-er@2x.png") 2x,
+        url("../images/tumblr-er@3x.png") 3x
+      );
+    }
+    &::after {
+      content: "Tumblr";
+    }
+  }
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 900;
+  font-family: Butler_Black_Stencil;
+}
+
+.info {
+  max-width: 487px;
 }

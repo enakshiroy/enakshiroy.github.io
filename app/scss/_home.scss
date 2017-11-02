@@ -1,55 +1,54 @@
 @import "./_variables";
 .home {
+  display: flex;
+  &-info {
+    max-width: 487px;
+    > .title {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    a {
+      &:link,
+      &:active,
+      &:visited {
+        border-bottom: $default-bottom-border;
+      }
+    }
+  }
+  &-social {
+    padding-top: 44px;
+    padding-bottom: 44px;
     display: flex;
-    &-info {
-        max-width: 487px;
-        >.title {
-            margin-top: 0;
-            margin-bottom: 20px;
+    flex-wrap: wrap;
+    &-link {
+      margin-left: 8px;
+      margin-right: 7px;
+      a {
+        &:link,
+        &:active,
+        &:visited,
+        &:hover {
+          border-bottom: 0;
         }
-        a {
-            &:link,
-            &:active,
-            &:visited,
-            &:hover {
-                border-bottom: $default-bottom-border;
-            }
-        }
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
     }
-    &-social {
-        padding-top: 44px;
-        padding-bottom: 44px;
-        display: flex;
-        flex-wrap: wrap;
-        &-link {
-            margin-left: 8px;
-            margin-right: 7px;
-            a {
-                &:link,
-                &:active,
-                &:visited,
-                &:hover {
-                    border-bottom: 0;
-                }
-            }
-            &:first-child {
-                margin-left: 0px;
-            }
-            &:last-child {
-                margin-right: 0px;
-            }
-        }
+  }
+  &-meme {
+    margin-left: 140px;
+    position: relative;
+    img {
+      position: absolute;
+      opacity: 0;
+      transition: all 0.3s linear;
     }
-    &-meme {
-        margin-left: 140px;
-        position: relative;
-        img {
-            position: absolute;
-            opacity: 0;
-            transition: all 0.3s linear;
-        }
-        &-active {
-            opacity: 1 !important;
-        }
+    &-active {
+      opacity: 1 !important;
     }
+  }
 }
