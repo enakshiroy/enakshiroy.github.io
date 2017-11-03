@@ -1,0 +1,29 @@
+.work {
+  &-grid {
+    margin-top: 47px;
+    div[class*="col-"] {
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      margin-right: 13px;
+      margin-bottom: 40px;
+      &-thumbnail {
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0 70px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    .info {
+      line-height: 2.5;
+      margin-top: 4px;
+    }
+  }
+  > .info {
+    &:last-child {
+      margin-bottom: 86px;
+      margin-top: 86px;
+    }
+  }
+}

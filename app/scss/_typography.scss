@@ -1,26 +1,25 @@
 @import "./_variables";
 //Global line height.
 $line-height-base: 1.44;
-$font-family-base: Georgia,
-'Arial Black';
+$font-family-base: Georgia, "Arial Black";
 $font-size-base: 16px;
 $selection-color: #636363;
 $white: #fff;
 @font-face {
-    font-family: "Butler_Black_Stencil";
-    src: url("../fonts/Butler_Black_Stencil.otf");
+  font-family: "Butler_Black_Stencil";
+  src: url("../fonts/Butler_Black_Stencil.otf");
 }
 
 html,
 body {
-    color: $text-color;
-    line-height: $line-height-base;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
+  color: $text-color;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
 }
 
 // Text selection highlight.
 ::selection {
-    color: $white;
-    background-color: $selection-color;
+  color: $white;
+  background-color: $selection-color;
 }

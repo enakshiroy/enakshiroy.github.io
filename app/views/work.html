@@ -1,6 +1,24 @@
 <div class="work">
     <h1 class="title">I design interfaces for web and mobile</h1>
-    <p class="">
-        I specialise in designing for digital interfaces, a few samples of which are showcased below. My resume can be found here.
+    <p class="info">
+        I specialise in designing for digital interfaces, a few samples of which are showcased below. My resume can be found
+        <a href="../enakshi_roy.pdf" target="_blank">here</a>.
+    </p>
+    <!-- Project Grid -->
+    <section class="work-grid">
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6" ng-repeat="project in projects">
+                    <div class="work-grid-item">
+                        <img alt="" class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="100%" data-toggle="modal"
+                            data-target="#projectModal">
+                        <p class="info">{{project.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <p class="info">Everything else is showcased on my
+        <a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a>.
     </p>
 </div>

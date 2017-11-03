@@ -1,57 +1,66 @@
-[{
-        "title": "Title 1",
-        "thumbnail": "http://placekitten.com/350/350",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 2",
-        "thumbnail": "https://unsplash.it/350/350/?gravity=east",
-        "images": [
-            "http://placekitten.com/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 3",
-        "thumbnail": "https://unsplash.it/350/350/?gravity=west",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-        "description_more": "more detail about the project"
-    },
-    {
-        "title": "Title 4",
-        "thumbnail": "https://unsplash.it/350/350/?gravity=north",
-        "images": [
-            "https://unsplash.it/854",
-            "https://unsplash.it/854/?gravity=east",
-            "https://unsplash.it/854/?gravity=west",
-            "https://unsplash.it/854/?gravity=north",
-            "https://unsplash.it/350/?gravity=south",
-            "https://unsplash.it/g/854"
-        ],
-        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-        "description_more": "more detail about the project"
-    }
+[
+  {
+    "title": "Compile Data Analytics",
+    "thumbnail":
+      "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/5660A1CF-CE0C-4CBB-B5F4-3752CD5BD6E8.png",
+    "images": [
+      "https://unsplash.it/854",
+      "https://unsplash.it/854/?gravity=east",
+      "https://unsplash.it/854/?gravity=west",
+      "https://unsplash.it/854/?gravity=north",
+      "https://unsplash.it/350/?gravity=south",
+      "https://unsplash.it/g/854"
+    ],
+    "description":
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
+    "description_more": "more detail about the project"
+  },
+  {
+    "title": "Liv Artificial Intelligence",
+    "thumbnail":
+      "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/E0D7119F-4966-4553-A2EE-03E04E54CFAB.png",
+    "images": [
+      "http://placekitten.com/854",
+      "https://unsplash.it/854/?gravity=east",
+      "https://unsplash.it/854/?gravity=west",
+      "https://unsplash.it/854/?gravity=north",
+      "https://unsplash.it/350/?gravity=south",
+      "https://unsplash.it/g/854"
+    ],
+    "description":
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
+    "description_more": "more detail about the project"
+  },
+  {
+    "title": "DailyRounds Healthcare",
+    "thumbnail":
+      "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/97536668-62FC-49D8-BADD-1844C8908976.png",
+    "images": [
+      "https://unsplash.it/854",
+      "https://unsplash.it/854/?gravity=east",
+      "https://unsplash.it/854/?gravity=west",
+      "https://unsplash.it/854/?gravity=north",
+      "https://unsplash.it/350/?gravity=south",
+      "https://unsplash.it/g/854"
+    ],
+    "description":
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
+    "description_more": "more detail about the project"
+  },
+  {
+    "title": "Snapshots of other projects",
+    "thumbnail":
+      "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/3A2B1A05-2F52-4002-92B4-27EF94FA8631.png",
+    "images": [
+      "https://unsplash.it/854",
+      "https://unsplash.it/854/?gravity=east",
+      "https://unsplash.it/854/?gravity=west",
+      "https://unsplash.it/854/?gravity=north",
+      "https://unsplash.it/350/?gravity=south",
+      "https://unsplash.it/g/854"
+    ],
+    "description":
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
+    "description_more": "more detail about the project"
+  }
 ]
