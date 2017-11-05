@@ -94,11 +94,10 @@ a {
 .nav-bar {
   display: flex;
   justify-content: flex-end;
-  margin-top: 71px;
+  margin-top: 60px;
   margin-bottom: 75px;
   &-link {
     margin-right: 15px;
-    padding-bottom: 5px;
     border-bottom: 0 !important;
     &:last-child {
       margin-right: 0;
