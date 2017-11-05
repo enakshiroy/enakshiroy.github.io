@@ -40,6 +40,14 @@ function HomeController($scope, ProjectFactory, jQuery) {
     $scope.selectedProject = project;
   };
 
+  $scope.isVisible = false;
+  $scope.onShown = () => {
+    console.log("Modal is shown");
+  };
+  $scope.onHide = () => {
+    console.log("modal is hidden");
+  };
+
   // All set. Let's invoke onLoad.
   onLoad();
 }

@@ -3,7 +3,7 @@
         <h1 class="title">Hello, I'm Enakshi</h1>
         <p>
             I'm an independent
-            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 1;" ng-mouseleave="activeMeme = 0;">User Interface and Experience Designer</a> based in Bangalore, India.
+            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 1;" ng-mouseleave="activeMeme = 0;" ng-click="isVisible=true;">User Interface and Experience Designer</a> based in Bangalore, India.
         </p>
         <p>
             Primarily engaging with startups, I try to design
@@ -62,8 +62,11 @@
     </section>
     <section class="home-meme">
         <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes">
-        <!-- <img width="304" alt="" src="http://www.tidy-mind.com/wp-content/uploads/2013/06/2013-06-25_142513-624x459.png">
-        <img width="304" alt="" src="https://s-media-cache-ak0.pinimg.com/originals/ac/b4/63/acb463cb6c220575691c034a85c818d2.jpg">
-        <img width="304" alt="" src="https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/C93A7A0B-9ACB-4EA8-A61F-1C412926601C.png"> -->
     </section>
+    <!-- <modal visible="isVisible" on-shown="onShown()" on-hide="onHide()">
+        <modal-header></modal-header>
+        <modal-body>
+            <img ng-src="{{memes[activeMeme].src}}" width="100%" alt="">
+        </modal-body>
+    </modal> -->
 </div>
