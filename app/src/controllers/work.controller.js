@@ -18,8 +18,11 @@ function WorkController($scope, ProjectFactory) {
    */
   $scope.projects = [];
 
+  $scope.selectedProject = null;
+
   $scope.select = project => {
-    console.log("Implement code to select project.");
+    $scope.selectedProject = project;
+    $scope.isVisible = true;
   };
 
   // All set let's invoke onLoad

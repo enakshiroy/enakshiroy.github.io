@@ -27,3 +27,54 @@
     }
   }
 }
+
+// ======= Project modal ==========
+.project-modal {
+  display: flex;
+  height: 100%;
+  &-title {
+    font-size: 26px;
+    padding: 0;
+    margin: 0 0 22px;
+    font-weight: bold;
+  }
+  &-info {
+    flex-grow: 1;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 854px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    .info {
+      margin: 0;
+      width: 100%;
+    }
+    .text-link {
+      font-size: 16px;
+    }
+  }
+  &-nav {
+    @include flexCenter();
+    .icon {
+      background: white;
+      @include flexCenter();
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &:first-child {
+      padding-left: 75px;
+    }
+    &:last-child {
+      padding-right: 75px;
+    }
+  }
+  &-image {
+    margin-bottom: 40px;
+  }
+}

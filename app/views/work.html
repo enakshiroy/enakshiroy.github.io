@@ -1,4 +1,4 @@
-<div class="work">
+<div class="work" id="work">
     <h1 class="title">I design interfaces for web and mobile</h1>
     <p class="info">
         I specialise in designing for digital interfaces, a few samples of which are showcased below. My resume can be found
@@ -22,3 +22,23 @@
         <a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a>.
     </p>
 </div>
+<modal visible="isVisible">
+    <modal-header></modal-header>
+    <modal-body>
+        <div class="project-modal">
+            <div class="project-modal-info">
+                <h3 class="project-modal-title">{{selectedProject.title}}</h3>
+                <p class="info">
+                    {{selectedProject.description}}
+                </p>
+                <div class="project-modal-image" ng-repeat="src in selectedProject.images">
+                    <img ng-src="{{src}}" width="100%">
+                    <p>
+                        Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
+                        If user which to read it, he or she can read it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </modal-body>
+</modal>

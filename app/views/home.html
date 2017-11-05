@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home" id="home">
     <section class="home-info">
         <h1 class="title">Hello, I'm Enakshi</h1>
         <p>
@@ -63,10 +63,11 @@
     <section class="home-meme">
         <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes">
     </section>
-    <!-- <modal visible="isVisible" on-shown="onShown()" on-hide="onHide()">
+</div>
+
+<!-- <modal visible="isVisible" on-shown="onShown()" on-hide="onHide()">
         <modal-header></modal-header>
         <modal-body>
             <img ng-src="{{memes[activeMeme].src}}" width="100%" alt="">
         </modal-body>
     </modal> -->
-</div>
