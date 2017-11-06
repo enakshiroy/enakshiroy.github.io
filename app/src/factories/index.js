@@ -1,3 +1,1 @@
-module.exports = [
-    require('./project.factory')
-];
+module.exports = [require("./asset.factory")];

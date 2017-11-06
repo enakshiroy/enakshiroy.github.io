@@ -1,20 +1,23 @@
 <div class="home" id="home">
     <section class="home-info">
         <h1 class="title">Hello, I&rsquo;m Enakshi</h1>
-        <p>
+        <p ng-repeat="me in aboutMe" compile="me"></p>
+        <!-- <p>
             I&rsquo;m an independent
-            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 1;" ng-mouseleave="activeMeme = 0;" ng-click="isVisible=true;">User Interface and Experience Designer</a> based in Bangalore, India.
+            <meme-link target="memes" src="https://picsum.photos/500?gravity=west">User Interface and Experience Designer</meme-link>based in Bangalore, India.
         </p>
         <p>
             Primarily engaging with startups, I try to design
-            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 2;" ng-mouseleave="activeMeme = 0;">beautiful, functional products and systems</a>. I believe in developing long-lasting relationships with my clients
-            to ensure design plays its role as a great
-            <a href="javascript:void 0;" ng-mouseenter="activeMeme = 3;" ng-mouseleave="activeMeme = 0;">value-add</a> to their businesses.
+            <meme-link target="memes" src="https://picsum.photos/500?gravity=south">beautiful, functional products and systems</meme-link>. I believe in developing long-lasting relationships with
+            my clients to ensure design plays its role as a great
+            <meme-link target="memes" src="https://picsum.photos/500?gravity=north">value-add</meme-link> to their businesses.
         </p>
         <p>
             I would love to hear from you over
-            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">email</a>.
-        </p>
+            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
+                <meme-link target="memes" src="http://www.freepngimg.com/download/email_marketing/4-2-email-transparent-png.png">email</meme-link>
+            </a>.
+        </p> -->
 
         <!-- Social Navigation link -->
         <nav class="home-social" ng-cloak shoot-menu>
@@ -60,14 +63,8 @@
                 <a class="icon icon-tumblr" href="https://exroy.tumblr.com" target="_blank"></a>
             </div>
     </section>
-    <section class="home-meme">
-        <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes">
+    <section id="memes" class="home-meme">
+        <img ng-if="defaultMeme" ng-src="{{defaultMeme}}" alt="">
+        <!-- <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes"> -->
     </section>
 </div>
-
-<!-- <modal visible="isVisible" on-shown="onShown()" on-hide="onHide()">
-        <modal-header></modal-header>
-        <modal-body>
-            <img ng-src="{{memes[activeMeme].src}}" width="100%" alt="">
-        </modal-body>
-    </modal> -->
