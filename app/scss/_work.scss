@@ -1,4 +1,8 @@
 .work {
+  > .title {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
   &-grid {
     margin-top: 47px;
     div[class*="col-"] {
