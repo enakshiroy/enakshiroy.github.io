@@ -1,4 +1,4 @@
-const modalDirective = $ => {
+const modalDirective = ($rootScope, $) => {
   const link = (scope, element, attrs) => {
     $(element).modal({
       show: false,
@@ -32,6 +32,12 @@ const modalDirective = $ => {
         scope.onHide({});
       });
     });
+    const routerChangeLisnter = $rootScope.$on("$routeChangeStart", () => {
+      $(element).modal("hide");
+    });
+    scope.$on("$destroy", () => {
+      routerChangeLisnter();
+    });
   };
   return {
     link,
@@ -51,5 +57,5 @@ const modalDirective = $ => {
 
 module.exports = {
   name: "modal",
-  directive: ["jQuery", modalDirective]
+  directive: ["$rootScope", "jQuery", modalDirective]
 };
