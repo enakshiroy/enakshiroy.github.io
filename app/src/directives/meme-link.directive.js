@@ -15,6 +15,11 @@ const memeLinkDirective = () => {
     $scope.hide = $event => {
       img.style.opacity = 0;
     };
+    $scope.onClick = $event => {
+      // Clicking element so that events can be bubbled up.
+      const nativeElement = element[0];
+      nativeElement.click();
+    };
   };
   return {
     link: link,
@@ -25,7 +30,7 @@ const memeLinkDirective = () => {
       src: "@"
     },
     template: `
-          <a class="" href="javascript: void 0;" ng-mouseenter="show()" ng-mouseleave="hide()">
+          <a class="" href="javascript: void 0;" ng-mouseenter="show()" ng-mouseleave="hide()" ng-click="onClick($event)">
             <ng-transclude></ng-transclude>
           </a>
           `
