@@ -105,6 +105,9 @@ a {
       border-bottom: $default-bottom-border !important;
     }
   }
+  @include when-smartphone {
+    justify-content: flex-start;
+  }
 }
 
 //=== All icons styling.
@@ -131,6 +134,9 @@ a {
     font-size: 14px;
     transition-delay: 0.5s;
     left: -50%;
+    @include when-smartphone {
+      content: "" !important;
+    }
   }
   &::before {
     background-size: contain;
@@ -388,4 +394,16 @@ a {
 
 .info {
   max-width: 487px;
+}
+
+.container {
+  @include when-tablet {
+    padding-left: 85px;
+    padding-right: 85px;
+    width: 768px;
+  }
+  @include when-smartphone {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }

@@ -1,6 +1,8 @@
 @import "./_variables";
 .home {
-  display: flex;
+  &-wrapper {
+    display: flex;
+  }
   &-info {
     max-width: 487px;
     > .title {
@@ -22,13 +24,12 @@
     }
   }
   &-social {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 44px;
     display: flex;
     flex-wrap: wrap;
     &-link {
-      margin-left: 8px;
-      margin-right: 7px;
+      margin-right: 15px;
       a {
         &:link,
         &:active,
@@ -51,9 +52,25 @@
     img {
       width: 304px;
       position: absolute;
-      transition: all 0.3s linear;
+      transition: opacity 0.3s linear;
       // In case image is png other images should not be visible.
       background-color: $white;
+    }
+  }
+  @include when-tablet {
+    &-info {
+      max-width: 300px;
+    }
+    &-meme {
+      margin-left: 39px;
+      img {
+        width: 259px;
+      }
+    }
+  }
+  @include when-smartphone {
+    &-meme {
+      display: none;
     }
   }
 }

@@ -1,5 +1,19 @@
+@import "./_variables";
 @mixin flexCenter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// All media queries mixins for tablets/iPads and smartphones/iPhone.
+@mixin when-tablet {
+  @media only screen and (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    @content;
+  }
+}
+
+@mixin when-smartphone {
+  @media only screen and (min-width: $min-smart-phone-width) and (max-width: $max-smart-phone-width) {
+    @content;
+  }
 }

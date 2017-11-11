@@ -1,70 +1,57 @@
 <div class="home" id="home">
-    <section class="home-info">
-        <h1 class="title">Hello, I&rsquo;m Enakshi</h1>
-        <p ng-repeat="me in aboutMe" compile="me"></p>
-        <!-- <p>
-            I&rsquo;m an independent
-            <meme-link target="memes" src="https://picsum.photos/500?gravity=west">User Interface and Experience Designer</meme-link>based in Bangalore, India.
-        </p>
-        <p>
-            Primarily engaging with startups, I try to design
-            <meme-link target="memes" src="https://picsum.photos/500?gravity=south">beautiful, functional products and systems</meme-link>. I believe in developing long-lasting relationships with
-            my clients to ensure design plays its role as a great
-            <meme-link target="memes" src="https://picsum.photos/500?gravity=north">value-add</meme-link> to their businesses.
-        </p>
-        <p>
-            I would love to hear from you over
-            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">
-                <meme-link target="memes" src="http://www.freepngimg.com/download/email_marketing/4-2-email-transparent-png.png">email</meme-link>
-            </a>.
-        </p> -->
-
-        <!-- Social Navigation link -->
-        <nav class="home-social" ng-cloak shoot-menu>
-
-            <!-- Behance -->
-            <div class="home-social-link">
-                <a class="icon icon-behance" href="https://www.behance.net/enakshi" target="_blank">
-                </a>
-            </div>
-
-            <!-- Linked In -->
-            <div class="home-social-link">
-                <a class="icon icon-linkedin" href="https://www.linkedin.com/in/enakshiroy" target="_blank"></a>
-            </div>
-
-            <!-- Dribble -->
-            <div class="home-social-link">
-                <a class="icon icon-dribbble" href="https://dribbble.com/enakshi" target="_blank"></a>
-            </div>
-
-            <!-- More -->
-            <div class="home-social-link shoot-menu-trigger">
-                <a class="icon icon-etc" href="javascript: void(0);"></a>
-            </div>
-
-            <!-- Facebook -->
-            <div class="home-social-link">
-                <a class="icon icon-facebook" href="https://www.facebook.com/enakshi.roy" target="_blank"></a>
-            </div>
-
-            <!-- Instagram -->
-            <div class="home-social-link">
-                <a class="icon icon-instagram" href="https://www.instagram.com/enakshizz/" target="_blank"></a>
-            </div>
-
-            <!-- Deviant Art -->
-            <div class="home-social-link">
-                <a class="icon icon-deviant" href="https://craproy.deviantart.com/" target="_blank"></a>
-            </div>
-
-            <!-- Tumblr -->
-            <div class="home-social-link">
-                <a class="icon icon-tumblr" href="https://exroy.tumblr.com" target="_blank"></a>
-            </div>
+    <section class="home-wrapper">
+        <section class="home-info">
+            <h1 class="title">Hello, I&rsquo;m Enakshi</h1>
+            <p ng-repeat="me in aboutMe" compile="me"></p>
+        </section>
+        <section id="memes" class="home-meme">
+            <img ng-if="defaultMeme" ng-src="{{defaultMeme}}" alt="">
+            <!-- <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes"> -->
+        </section>
     </section>
-    <section id="memes" class="home-meme">
-        <img ng-if="defaultMeme" ng-src="{{defaultMeme}}" alt="">
-        <!-- <img ng-src="{{meme.src}}" width="304" alt="" ng-class="{'home-meme-active': $index === activeMeme}" ng-repeat="meme in memes"> -->
-    </section>
+    <!-- Social Navigation link -->
+    <nav class="home-social" ng-cloak shoot-menu>
+
+        <!-- Behance -->
+        <div class="home-social-link">
+            <a class="icon icon-behance" href="https://www.behance.net/enakshi" target="_blank">
+            </a>
+        </div>
+
+        <!-- Linked In -->
+        <div class="home-social-link">
+            <a class="icon icon-linkedin" href="https://www.linkedin.com/in/enakshiroy" target="_blank"></a>
+        </div>
+
+        <!-- Dribble -->
+        <div class="home-social-link">
+            <a class="icon icon-dribbble" href="https://dribbble.com/enakshi" target="_blank"></a>
+        </div>
+
+        <!-- More -->
+        <div class="home-social-link shoot-menu-trigger">
+            <a class="icon icon-etc" href="javascript: void(0);"></a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="home-social-link">
+            <a class="icon icon-facebook" href="https://www.facebook.com/enakshi.roy" target="_blank"></a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="home-social-link">
+            <a class="icon icon-instagram" href="https://www.instagram.com/enakshizz/" target="_blank"></a>
+        </div>
+
+        <!-- Deviant Art -->
+        <div class="home-social-link">
+            <a class="icon icon-deviant" href="https://craproy.deviantart.com/" target="_blank"></a>
+        </div>
+
+        <!-- Tumblr -->
+        <div class="home-social-link">
+            <a class="icon icon-tumblr" href="https://exroy.tumblr.com" target="_blank"></a>
+        </div>
+        <div class="clear-fix"></div>
+    </nav>
 </div>

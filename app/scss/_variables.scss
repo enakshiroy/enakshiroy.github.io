@@ -2,3 +2,12 @@ $transparent: rgba(0, 0, 0, 0);
 $text-color: #636363;
 $white: #ffffff;
 $default-bottom-border: 1px solid $text-color;
+
+// Break points for different resolutions.
+// Smart phone
+$min-smart-phone-width: 320px;
+$max-smart-phone-width: 640px;
+
+// tablet and ipad
+$min-tablet-width: 641px;
+$max-tablet-width: 991px;
