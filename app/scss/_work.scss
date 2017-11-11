@@ -5,6 +5,7 @@
   }
   &-grid {
     margin-top: 47px;
+    margin-bottom: 100px;
     div[class*="col-"] {
       margin: 0;
       padding: 0;
@@ -15,19 +16,13 @@
       &-thumbnail {
         &:hover {
           cursor: pointer;
-          box-shadow: 0 0 70px rgba(0, 0, 0, 0.2);
+          // box-shadow: 0 0 70px rgba(0, 0, 0, 0.2);
         }
       }
     }
     .info {
       line-height: 2.5;
       margin-top: 4px;
-    }
-  }
-  > .info {
-    &:last-child {
-      margin-top: 20px;
-      margin-bottom: 44px;
     }
   }
 }
