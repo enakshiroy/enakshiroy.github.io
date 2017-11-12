@@ -4,63 +4,179 @@
     "thumbnail":
       "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/5660A1CF-CE0C-4CBB-B5F4-3752CD5BD6E8.png",
     "images": [
-      "https://unsplash.it/854",
-      "https://unsplash.it/854/?gravity=east",
-      "https://unsplash.it/854/?gravity=west",
-      "https://unsplash.it/854/?gravity=north",
-      "https://unsplash.it/350/?gravity=south",
-      "https://unsplash.it/g/854"
+      {
+        "src": "https://unsplash.it/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=east",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=west",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=north",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=south",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/g/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      }
     ],
     "description":
-      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-    "description_more": "more detail about the project"
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
   },
   {
     "title": "Liv Artificial Intelligence",
     "thumbnail":
       "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/E0D7119F-4966-4553-A2EE-03E04E54CFAB.png",
     "images": [
-      "http://placekitten.com/854",
-      "https://unsplash.it/854/?gravity=east",
-      "https://unsplash.it/854/?gravity=west",
-      "https://unsplash.it/854/?gravity=north",
-      "https://unsplash.it/350/?gravity=south",
-      "https://unsplash.it/g/854"
+      {
+        "src": "https://unsplash.it/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=east",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=west",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=north",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=south",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/g/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      }
     ],
     "description":
-      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-    "description_more": "more detail about the project"
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
   },
   {
     "title": "DailyRounds Healthcare",
     "thumbnail":
       "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/97536668-62FC-49D8-BADD-1844C8908976.png",
     "images": [
-      "https://unsplash.it/854",
-      "https://unsplash.it/854/?gravity=east",
-      "https://unsplash.it/854/?gravity=west",
-      "https://unsplash.it/854/?gravity=north",
-      "https://unsplash.it/350/?gravity=south",
-      "https://unsplash.it/g/854"
+      {
+        "src": "https://unsplash.it/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=east",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=west",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=north",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=south",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/g/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      }
     ],
     "description":
-      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-    "description_more": "more detail about the project"
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
   },
   {
     "title": "Snapshots of other projects",
     "thumbnail":
       "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/3A2B1A05-2F52-4002-92B4-27EF94FA8631.png",
     "images": [
-      "https://unsplash.it/854",
-      "https://unsplash.it/854/?gravity=east",
-      "https://unsplash.it/854/?gravity=west",
-      "https://unsplash.it/854/?gravity=north",
-      "https://unsplash.it/350/?gravity=south",
-      "https://unsplash.it/g/854"
+      {
+        "src": "https://unsplash.it/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=east",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=west",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=north",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/854/?gravity=south",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      },
+      {
+        "src": "https://unsplash.it/g/854",
+        "caption": "Image caption goes here",
+        "description":
+          "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+      }
     ],
     "description":
-      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks",
-    "description_more": "more detail about the project"
+      "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
   }
 ]

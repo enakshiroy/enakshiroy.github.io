@@ -19,25 +19,27 @@
             </div>
         </section>
     </section>
-    <!-- <p class="info">
-    </p> -->
 </div>
-<modal visible="isVisible">
+
+<modal visible="isVisible" class="project-modal">
     <modal-header></modal-header>
     <modal-body>
-        <div class="project-modal">
-            <div class="project-modal-info">
-                <h3 class="project-modal-title">{{selectedProject.title}}</h3>
-                <p class="info">
-                    {{selectedProject.description}}
+        <div class="project-modal-info">
+            <h3 class="project-modal-title">
+                {{selectedProject.title}}
+            </h3>
+            <p class="info" ng-if="selectedProject.description">
+                {{selectedProject.description}}
+            </p>
+            <!-- TODO: Refine this structures when Enakshi provides feedback -->
+            <div ng-repeat="image in selectedProject.images">
+                <figure>
+                    <img ng-src="{{image.src}}" width="100%">
+                    <figcaption ng-if="image.caption"> {{image.caption}}</figcaption>
+                </figure>
+                <p class="info" ng-if="image.description">
+                    {{image.description}}
                 </p>
-                <div class="project-modal-image" ng-repeat="src in selectedProject.images">
-                    <img ng-src="{{src}}" width="100%">
-                    <p>
-                        Enakshi will provide some description about the which will be displayed here. This is decription will be a detailed a description.
-                        If user which to read it, he or she can read it.
-                    </p>
-                </div>
             </div>
         </div>
     </modal-body>

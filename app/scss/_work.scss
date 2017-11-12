@@ -28,19 +28,70 @@
 }
 
 // ======= Project modal ==========
+// .project-modal {
+//   display: flex;
+//   height: 100%;
+//   &-title {
+//     font-size: 26px;
+//     padding: 0;
+//     margin: 0 0 22px;
+//     font-weight: bold;
+//   }
+//   &-info {
+//     flex-grow: 1;
+//     overflow-y: auto;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     max-width: 854px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     text-align: center;
+//     .info {
+//       margin: 0;
+//       width: 100%;
+//     }
+//     .text-link {
+//       font-size: 16px;
+//     }
+//   }
+//   &-nav {
+//     @include flexCenter();
+//     .icon {
+//       background: white;
+//       @include flexCenter();
+//       &:hover {
+//         opacity: 0.5;
+//       }
+//     }
+//     &:first-child {
+//       padding-left: 75px;
+//     }
+//     &:last-child {
+//       padding-right: 75px;
+//     }
+//   }
+//   &-image {
+//     margin-bottom: 40px;
+//   }
+// }
+
 .project-modal {
-  display: flex;
-  height: 100%;
+  .modal-header {
+    position: absolute;
+    right: 0;
+    z-index: 999999;
+    padding: 44px 35px;
+  }
+  .modal-content {
+    overflow-y: auto;
+  }
   &-title {
-    font-size: 26px;
-    padding: 0;
-    margin: 0 0 22px;
-    font-weight: bold;
+    margin-top: 72px;
   }
   &-info {
-    flex-grow: 1;
-    overflow-y: auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,31 +100,18 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    .info {
-      margin: 0;
+    figcaption {
+      font-size: 13px;
       width: 100%;
+      text-align: center;
+      margin-top: 10px;
     }
-    .text-link {
-      font-size: 16px;
+    .info {
+      margin: 80px auto 10px auto;
+      max-width: 800px;
     }
-  }
-  &-nav {
-    @include flexCenter();
-    .icon {
-      background: white;
-      @include flexCenter();
-      &:hover {
-        opacity: 0.5;
-      }
+    > .info {
+      margin-bottom: 30px;
     }
-    &:first-child {
-      padding-left: 75px;
-    }
-    &:last-child {
-      padding-right: 75px;
-    }
-  }
-  &-image {
-    margin-bottom: 40px;
   }
 }
