@@ -52,7 +52,6 @@
     img {
       width: 304px;
       position: absolute;
-      transition: opacity 0.3s linear;
       // In case image is png other images should not be visible.
       background-color: $white;
     }

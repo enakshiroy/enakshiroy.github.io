@@ -44,7 +44,7 @@ body {
 .modal-content {
   height: 100%;
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
 }
 
 .modal-header {
@@ -69,7 +69,7 @@ body.modal-open {
   #home,
   > header,
   > footer {
-    filter: blur(5px);
+    //  filter: blur(5px);
   }
 }
 

@@ -14,20 +14,29 @@ const shootMenuDirective = ($log, $timeout, $window) => {
     return width;
   };
 
-  const placeTargets = targets => {
+  const hasWrapped = targets =>
+    targets.some((node, index) => {
+      if (index === 0) {
+        return false;
+      }
+      const { top: currTop } = node.getBoundingClientRect();
+      const { top: prevTop } = targets[index - 1].getBoundingClientRect();
+      return currTop !== prevTop;
+    });
+
+  const setDisplay = (targets, display) => {
     targets.forEach(target => {
-      setStyles(target, {
-        display: "none"
-      });
+      setStyles(target, { display });
     });
   };
 
   const shootTargets = (targets, trigger) => {
     trigger.style.display = "none";
+    setDisplay(targets, "initial");
+    if (hasWrapped(targets)) {
+      return;
+    }
     targets.forEach((node, index) => {
-      setStyles(node, {
-        display: "initial"
-      });
       const x = -getWidth(node) * index;
       setStyles(node, {
         transform: `translateX(${x}px)`
@@ -61,7 +70,7 @@ const shootMenuDirective = ($log, $timeout, $window) => {
     );
     // Ugly hack for to preload images if shoot menu has any.
     setTimeout(() => {
-      placeTargets(targets);
+      setDisplay(targets, "none");
     }, 10);
     trigger.addEventListener("click", event => {
       shootTargets(targets, trigger);
