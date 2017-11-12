@@ -20,6 +20,19 @@ body {
   }
   > footer {
     margin-bottom: 60px;
+    font-style: italic;
+    @include when-smartphone {
+      display: flex;
+      flex-direction: column;
+      .sushi {
+        display: none;
+      }
+      > span {
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -64,15 +77,6 @@ body {
   overflow-y: auto;
 }
 
-body.modal-open {
-  #work,
-  #home,
-  > header,
-  > footer {
-    //  filter: blur(5px);
-  }
-}
-
 // Anchor tag.
 a {
   &:link,
@@ -110,6 +114,11 @@ a {
   }
 }
 
+.sushi {
+  &::after {
+    content: "🍣";
+  }
+}
 //=== All icons styling.
 .icon {
   width: 40px;
@@ -407,9 +416,3 @@ a {
     padding-right: 45px;
   }
 }
-
-// @media (min-width: 1200px) {
-//   .container {
-//     max-width: 970px;
-//   }
-// }
