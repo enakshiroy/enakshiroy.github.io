@@ -33,13 +33,13 @@
             </p>
             <!-- TODO: Refine this structures when Enakshi provides feedback -->
             <div ng-repeat="image in selectedProject.images">
+                <p class="info" ng-if="image.description">
+                    {{image.description}}
+                </p>
                 <figure>
                     <img ng-src="{{image.src}}" width="100%">
                     <figcaption ng-if="image.caption"> {{image.caption}}</figcaption>
                 </figure>
-                <p class="info" ng-if="image.description">
-                    {{image.description}}
-                </p>
             </div>
         </div>
     </modal-body>

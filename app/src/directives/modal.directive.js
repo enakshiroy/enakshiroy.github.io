@@ -12,30 +12,34 @@ const modalDirective = ($rootScope, $) => {
       },
       function(value) {
         if (value === true) {
-          $(element).modal("show");
+          $(element).modal('show');
         } else {
-          $(element).modal("hide");
+          $(element).modal('hide');
         }
       }
     );
 
-    $(element).on("shown.bs.modal", function() {
+    $(element).on('hide.bs.modal', () => {
+      $('.modal-body').scrollTop(0);
+    });
+
+    $(element).on('shown.bs.modal', function() {
       scope.$apply(function() {
         scope.$parent[attrs.visible] = true;
         scope.onShown({});
       });
     });
 
-    $(element).on("hidden.bs.modal", function() {
-      scope.$apply(function() {
+    $(element).on('hidden.bs.modal', () => {
+      scope.$apply(() => {
         scope.$parent[attrs.visible] = false;
         scope.onHide({});
       });
     });
-    const routerChangeLisnter = $rootScope.$on("$routeChangeStart", () => {
-      $(element).modal("hide");
+    const routerChangeLisnter = $rootScope.$on('$routeChangeStart', () => {
+      $(element).modal('hide');
     });
-    scope.$on("$destroy", () => {
+    scope.$on('$destroy', () => {
       routerChangeLisnter();
     });
   };
@@ -48,14 +52,14 @@ const modalDirective = ($rootScope, $) => {
                     </div>
                 </div>
             </div>`,
-    restrict: "E",
+    restrict: 'E',
     transclude: true,
     replace: true,
-    scope: { visible: "=", onShown: "&", onHide: "&" }
+    scope: { visible: '=', onShown: '&', onHide: '&' }
   };
 };
 
 module.exports = {
-  name: "modal",
-  directive: ["$rootScope", "jQuery", modalDirective]
+  name: 'modal',
+  directive: ['$rootScope', 'jQuery', modalDirective]
 };
