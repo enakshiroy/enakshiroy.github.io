@@ -6,7 +6,7 @@
   &-grid {
     margin-top: 47px;
     margin-bottom: 100px;
-    div[class*="col-"] {
+    div[class*='col-'] {
       margin: 0;
       padding: 0;
     }
@@ -30,15 +30,6 @@
 // ======= Project modal ==========
 
 .project-modal {
-  .modal-header {
-    position: absolute;
-    right: 0;
-    z-index: 999999;
-    padding: 44px 35px;
-  }
-  .modal-content {
-    overflow-y: auto;
-  }
   &-title {
     margin-top: 72px;
   }

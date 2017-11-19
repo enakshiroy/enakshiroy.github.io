@@ -55,17 +55,28 @@ body {
 }
 
 .modal-content {
+  overflow-y: auto;
   height: 100%;
   border-radius: 0;
   background: rgba(255, 255, 255, 1);
 }
 
 .modal-header {
-  padding: 15px 15px 5px 15px;
+  position: absolute;
+  right: 0;
+  z-index: 999999;
+  padding: 44px 35px;
   border-bottom: none;
   .close {
     color: $text-color;
     opacity: 1;
+    outline: none;
+  }
+  @include when-smartphone {
+    padding: 24px 28px;
+  }
+  @include when-tablet {
+    padding: 24px 28px;
   }
 }
 
@@ -73,6 +84,14 @@ body {
   padding: 0;
   height: 97%;
   overflow-y: auto;
+  @include when-tablet {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @include when-smartphone {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
 }
 
 // Anchor tag.
