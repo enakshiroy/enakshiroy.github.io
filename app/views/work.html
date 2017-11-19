@@ -31,7 +31,6 @@
             <p class="info" ng-if="selectedProject.description">
                 {{selectedProject.description}}
             </p>
-            <!-- TODO: Refine this structures when Enakshi provides feedback -->
             <div ng-repeat="image in selectedProject.images">
                 <p class="info" ng-if="image.description">
                     {{image.description}}
@@ -42,9 +41,9 @@
                 </figure>
             </div>
             <div class="project-modal-control">
-                <a href="javascript: void 0;"> &#8249; Previous project</a>
+                <a ng-if="!isFirst(selectedProject)" href="javascript: void 0;" ng-click="prev()"> &#8249; Previous project</a>
                 <span></span>
-                <a href="javascript: void 0;">Next project &#8250;</a>
+                <a ng-if="!isLast(selectedProject)" href="javascript: void 0;" ng-click="next()">Next project &#8250;</a>
             </div>
         </div>
     </modal-body>

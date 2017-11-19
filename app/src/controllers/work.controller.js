@@ -1,4 +1,4 @@
-function WorkController($scope, AssetFactory) {
+function WorkController($scope, AssetFactory, ErEvents) {
   /**
    * On load for controller. We'll do our basic setup in it.
    */
@@ -8,7 +8,7 @@ function WorkController($scope, AssetFactory) {
         $scope.projects = response.data;
       })
       .catch(error => {
-        console.log("Something went terribly wrong!!");
+        console.log('Something went terribly wrong!!');
         console.error(error);
       });
   };
@@ -25,11 +25,33 @@ function WorkController($scope, AssetFactory) {
     $scope.isVisible = true;
   };
 
+  $scope.next = () => {
+    if ($scope.isLast($scope.selectedProject)) {
+      return;
+    }
+    const index = $scope.projects.indexOf($scope.selectedProject);
+    $scope.selectedProject = $scope.projects[index + 1];
+    $scope.$broadcast(ErEvents.SCROLL_TO_TOP);
+  };
+
+  $scope.prev = () => {
+    if ($scope.isFirst($scope.selectedProject)) {
+      return;
+    }
+    const index = $scope.projects.indexOf($scope.selectedProject);
+    $scope.selectedProject = $scope.projects[index - 1];
+    $scope.$broadcast(ErEvents.SCROLL_TO_TOP);
+  };
+
+  $scope.isLast = project =>
+    $scope.projects.indexOf(project) === $scope.projects.length - 1;
+  $scope.isFirst = project => $scope.projects.indexOf(project) === 0;
+
   // All set let's invoke onLoad
   onLoad();
 }
 
 module.exports = {
-  name: "WorkController",
-  controller: ["$scope", "AssetFactory", WorkController]
+  name: 'WorkController',
+  controller: ['$scope', 'AssetFactory', 'ErEvents', WorkController]
 };

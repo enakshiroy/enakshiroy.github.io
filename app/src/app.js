@@ -1,15 +1,20 @@
-const jQuery = require("jquery");
+const jQuery = require('jquery');
 window.$ = window.jQuery = jQuery;
-require("bootstrap");
+require('bootstrap');
 jQuery.noConflict(true);
 
-const angular = require("angular");
-const app = angular.module("enakshi", [require("angular-route")]);
+const angular = require('angular');
+const app = angular.module('enakshi', [require('angular-route')]);
 
 // ugly hack to get jqiuery selector in directive.
 // TODO: Use broserify-shim
-app.constant("jQuery", jQuery);
-app.constant("Routes", require("./routes"));
+app.constant('jQuery', jQuery);
+app.constant('Routes', require('./routes'));
+
+(() => {
+  const constants = require('./constants');
+  constants.forEach(({ name, constant }) => app.constant(name, constant));
+})();
 
 // config module with routes.
 (() => {
@@ -22,28 +27,28 @@ app.constant("Routes", require("./routes"));
     });
     // redirect to default router i.e. Home Page.
     $routeProvider.otherwise({
-      redirectTo: "/"
+      redirectTo: '/'
     });
-    $locationProvider.hashPrefix("");
+    $locationProvider.hashPrefix('');
   }
-  app.config(["$routeProvider", "$locationProvider", "Routes", config]);
+  app.config(['$routeProvider', '$locationProvider', 'Routes', config]);
 })();
 
 // add factories
 (() => {
-  const controllers = require("./factories");
+  const controllers = require('./factories');
   controllers.forEach(({ name, factory }) => app.factory(name, factory));
 })();
 
 // add filters
 (() => {
-  const filters = require("./filters");
+  const filters = require('./filters');
   filters.forEach(({ name, filter }) => app.filter(name, filter));
 })();
 
 // add directives
 (() => {
-  const directives = require("./directives");
+  const directives = require('./directives');
   directives.forEach(({ name, directive }) => {
     app.directive(name, directive);
   });
@@ -51,7 +56,7 @@ app.constant("Routes", require("./routes"));
 
 // add controllers
 (() => {
-  const controllers = require("./controllers");
+  const controllers = require('./controllers');
   controllers.forEach(({ name, controller }) =>
     app.controller(name, controller)
   );
@@ -62,7 +67,7 @@ app.constant("Routes", require("./routes"));
   function run($rootScope, $location) {
     $rootScope.isActive = viewLocation => viewLocation === $location.path();
   }
-  app.run(["$rootScope", "$location", run]);
+  app.run(['$rootScope', '$location', run]);
 })();
 
 // on load.

@@ -1,5 +1,7 @@
-const modalDirective = ($rootScope, $) => {
+const modalDirective = ($rootScope, $, ErEvents) => {
   const link = (scope, element, attrs) => {
+    const scrollTop = () => $('.modal-body').scrollTop(0);
+
     $(element).modal({
       show: false,
       keyboard: attrs.keyboard,
@@ -20,7 +22,7 @@ const modalDirective = ($rootScope, $) => {
     );
 
     $(element).on('hide.bs.modal', () => {
-      $('.modal-body').scrollTop(0);
+      scrollTop();
     });
 
     $(element).on('shown.bs.modal', function() {
@@ -36,6 +38,11 @@ const modalDirective = ($rootScope, $) => {
         scope.onHide({});
       });
     });
+
+    scope.$on(ErEvents.SCROLL_TO_TOP, () => {
+      scrollTop();
+    });
+
     const routerChangeLisnter = $rootScope.$on('$routeChangeStart', () => {
       $(element).modal('hide');
     });
@@ -61,5 +68,5 @@ const modalDirective = ($rootScope, $) => {
 
 module.exports = {
   name: 'modal',
-  directive: ['$rootScope', 'jQuery', modalDirective]
+  directive: ['$rootScope', 'jQuery', 'ErEvents', modalDirective]
 };
