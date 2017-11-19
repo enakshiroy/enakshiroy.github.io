@@ -50,4 +50,21 @@
       margin-bottom: 30px;
     }
   }
+  &-control {
+    display: flex;
+    width: 100%;
+    margin-top: 75px;
+    margin-bottom: 125px;
+    > a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        border-bottom: 0;
+      }
+    }
+    > span {
+      flex-grow: 1;
+    }
+  }
 }
