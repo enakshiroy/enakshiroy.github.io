@@ -64,19 +64,21 @@ body {
 .modal-header {
   position: absolute;
   right: 0;
-  z-index: 999999;
-  padding: 44px 35px;
+  left: 0;
+  z-index: 9999;
+  padding: 44px 34px 7px;
   border-bottom: none;
+  background: white;
   .close {
     color: $text-color;
     opacity: 1;
     outline: none;
   }
   @include when-smartphone {
-    padding: 24px 28px;
+    padding: 24px 28px 7px;
   }
   @include when-tablet {
-    padding: 24px 28px;
+    padding: 24px 28px 7px;
   }
 }
 
