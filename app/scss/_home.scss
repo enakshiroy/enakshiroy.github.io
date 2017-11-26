@@ -55,6 +55,7 @@
       // In case image is png other images should not be visible.
       background-color: $white;
     }
+    
   }
   @include when-tablet {
     &-info {

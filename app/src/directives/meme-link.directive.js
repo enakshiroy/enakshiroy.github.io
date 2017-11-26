@@ -1,5 +1,5 @@
 const memeLinkDirective = () => {
-  const createImgElement = (src, styles) => {
+  const createImgElement = (src, styles = {}) => {
     const img = document.createElement("img");
     img.src = src;
     Object.assign(img.style, styles);
@@ -8,12 +8,21 @@ const memeLinkDirective = () => {
 
   const link = ($scope, element, attrs) => {
     const img = createImgElement($scope.src, { opacity: 0 });
-    document.getElementById($scope.target).appendChild(img);
+    const target = document.getElementById($scope.target);
+    target.appendChild(img);
+    const [defaultImg] = Array.prototype.slice.call(target.children)
+      .filter(({ className }) => className.includes('ng-scope'));
     $scope.show = $event => {
+      if (defaultImg) {
+        defaultImg.style.opacity = 0;
+      }
       img.style.opacity = 1;
     };
     $scope.hide = $event => {
       img.style.opacity = 0;
+      if (defaultImg) {
+        defaultImg.style.opacity = 1;
+      }
     };
     $scope.onClick = $event => {
       // Clicking element so that events can be bubbled up.
