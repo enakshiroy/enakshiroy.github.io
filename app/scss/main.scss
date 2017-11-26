@@ -68,7 +68,6 @@ body {
   z-index: 9999;
   padding: 44px 34px 7px;
   border-bottom: none;
-  background: white;
   .close {
     color: $text-color;
     opacity: 1;
@@ -76,9 +75,11 @@ body {
   }
   @include when-smartphone {
     padding: 24px 28px 7px;
+    background: white;
   }
   @include when-tablet {
     padding: 24px 28px 7px;
+    background: white;
   }
 }
 
