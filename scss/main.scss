@@ -1,4 +1,4 @@
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min';
+@import './node_modules/bootstrap/dist/css/bootstrap.min';
 @import './_variables';
 @import './_mixins';
 @import './_typography';
@@ -352,9 +352,9 @@ figcaption {
   &-instagram {
     background-image: url('../images/instagram_2.png');
     background-image: image-set(
-      url('../images/instagram_2.png') 1x,
-      url('../images/instagram_2@2x.png') 2x,
-      url('../images/instagram_2@3x.png') 3x
+      url('../../images/instagram_2.png') 1x,
+      url('../../images/instagram_2@2x.png') 2x,
+      url('../../images/instagram_2@3x.png') 3x
     );
     &::before {
       content: ' ';

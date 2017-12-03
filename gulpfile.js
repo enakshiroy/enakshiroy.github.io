@@ -27,8 +27,8 @@ function logError(task, done) {
 
 // Fonts
 gulp.task('fonts', () => {
-    return gulp.src('./app/fonts/*.{ttf,otf}')
-        .pipe(gulp.dest('./app/dist/fonts'));
+    return gulp.src('./fonts/*.{ttf,otf}')
+        .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('views', (done) => {
@@ -37,17 +37,17 @@ gulp.task('views', (done) => {
 });
 
 gulp.task('images', function () {
-    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+    return gulp.src('./images/**/*.+(png|jpg|jpeg|gif|svg)')
         .pipe(imagemin({
             // Setting interlaced to true
             interlaced: true
         }))
-        .pipe(gulp.dest('app/dist/images'))
+        .pipe(gulp.dest('dist/images'))
 });
 
 // Compile our sass files.
 gulp.task('sass', ['fonts'], (done) => {
-    return gulp.src('./app/scss/**/*.scss')
+    return gulp.src('./scss/**/*.scss')
         .pipe(sourcemaps.init({
             loadMaps: true
         }))
@@ -56,7 +56,7 @@ gulp.task('sass', ['fonts'], (done) => {
         .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('app/dist/css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(reload({
             stream: true
         }));
@@ -65,9 +65,9 @@ gulp.task('sass', ['fonts'], (done) => {
 // process JS files and return the stream.
 gulp.task('js', (done) => {
     return browserify({
-            entries: './app/src/app.js',
-            debug: true
-        }).bundle()
+        entries: './src/app.js',
+        debug: true
+    }).bundle()
         .on('error', logError('js', done))
         .pipe(source('app.js'))
         .pipe(buffer())
@@ -81,7 +81,7 @@ gulp.task('js', (done) => {
         .on('error', logError('js', done))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('app/dist/js'));
+        .pipe(gulp.dest('dist/js'));
 });
 
 // create a task that ensures the `js` task is complete before
@@ -94,28 +94,29 @@ gulp.task('js-watch', ['js'], (done) => {
 gulp.task('serve', () => {
     browserSync({
         server: {
-            baseDir: 'app'
+            baseDir: './',
+            index: 'index.html'
         }
     });
 });
 
 gulp.task('cleanup', function () {
-    del('app/dist');
+    del('dist');
 });
 
 // Sets wacthers for files and runs corresponding tasks.
 gulp.task('watch', () => {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
-    gulp.watch('app/src/**/*.js', ['js-watch']);
-    gulp.watch('app/views/*.html', ['views']);
+    gulp.watch('scss/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.js', ['js-watch']);
+    gulp.watch('views/*.html', ['views']);
 });
 
 gulp.task('build', cb => {
     runSequence([
-            'sass',
-            'js',
-            'images'
-        ],
+        'sass',
+        'js',
+        'images'
+    ],
         cb);
 });
 
