@@ -1,150 +1,195 @@
 [
-	{
-		"title": "Compile Data Analytics",
-		"thumbnail": "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/5660A1CF-CE0C-4CBB-B5F4-3752CD5BD6E8.png",
-		"images": [
-			{
-				"src": "https://i.imgur.com/QbAIFmW.jpg",
-				"caption": "Image caption goes here"
+    {
+        "title": "Compile Data Analytics",
+        "thumbnail": "./images/work/compile.png",
+        "srcset": "./images/work/compile@2x.png 2x, ./images/work/compile@3x.png 3x",
+        "images": [
+            {
+                "src": "./images/work/c-01.png",
+                "srcset": "./images/work/c-01@2x.png 2x, ./images/work/c-01@3x.png 3x"
 			},
-			{
-				"src": "https://www.mcdonalds.com/content/dam/usa/documents/mcdelivery/mcdelivery_new11.jpg",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/c-02.png",
+                "srcset": "./images/work/c-02@2x.png 2x, ./images/work/c-02@3x.png 3x",
+                "description": "The tech page describes what goes on when selecting the relevant leads to explain the process and what goes on behind the scenes. Compile’s goal is simple: deliver data that drives great products. The leads are easy to use and integrate with the sales workflow."
 			},
-			{
-				"src": "http://www.foodanddrinkdevon.co.uk/sites/default/files/styles/quicklink/public/quicklinks/food_producer_photo.jpg?itok=5_6Zniu8",
-				"caption": "Image2"
+            {
+
+                "src": "./images/work/c-03.png",
+                "srcset": "./images/work/c-03@2x.png 2x, ./images/work/c-03@3x.png 3x",
+                "description": "Exercises in visual direction"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=west",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+
+                "src": "./images/work/c-04.png",
+                "srcset": "./images/work/c-04@2x.png 2x, ./images/work/c-04@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=north",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+
+                "src": "./images/work/c-05.png",
+                "srcset": "./images/work/c-05@2x.png 2x, ./images/work/c-05@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=south",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/c-06.png",
+                "srcset": "./images/work/c-06@2x.png 2x, ./images/work/c-06@3x.png 3x",
+                "description": "The product works with access to the company’s CRM data for the last few months to analyse their win/loss profile. A set of project-linked leads is delivered every week with full account information. Feedback from interaction metrics are used to tune future delivery for maximum conversions."
 			},
-			{
-				"src": "https://unsplash.it/g/854",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/c-07.png",
+                "srcset": "./images/work/c-07@2x.png 2x, ./images/work/c-07@3x.png 3x",
+                "description": "The team of data scientists and machine learning experts has built an engine that sifts through the deep public web to find active opportunities. The engine analyzes multiple vectors such as firmographic data, install base information, relevant triggers along with lead behavior."
+			},
+            {
+                "src": "./images/work/c-09.png",
+                "srcset": "./images/work/c-09@2x.png 2x, ./images/work/c-09@3x.png 3x",
+                "description": "Meta-data from a company’s marketing or sales automation tool is used to create a Best Fit model of their prospects. The data can be anonymized – no account or lead identifiable information is required. Next, the model is applied to opportunities identified by the engine to pick only those customers that have shown a high propensity to buy and match their ideal profile. Feedback from the sales funnel – CTR, response score, conversions to MQL, SAL – are used to tune the filter."
+			},
+            {
+                "src": "./images/work/c-10.png",
+                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x"
+			},
+            {
+                "src": "./images/work/c-11.png",
+                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x"
 			}
 		],
-		"description": "Compile Inc. now has a new website that I have also designed, but here's the old one, created in July 2015."
+        "description": "Compile is a data platform that is built to structure and organize disparate data types. My role involved communicating the product through their website and consequently, creating a dashboard that would make it easier for the users to consume and act upon the data provided. Below is the landing page of their website that I had designed previously, which aimed at visually showcasing the picking of relevant leads from a host of available information points scattered across the internet and other sources."
 	},
-	{
-		"title": "Liv Artificial Intelligence",
-		"thumbnail": "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/E0D7119F-4966-4553-A2EE-03E04E54CFAB.png",
-		"images": [
-			{
-				"src": "https://unsplash.it/854",
-				"caption": "Image caption goes here"
+    {
+        "title": "Liv Artificial Intelligence",
+        "thumbnail": "./images/work/liv.png",
+        "srcset": "./images/work/liv@2x.png 2x, ./images/work/liv@3x.png 3x",
+        "images": [
+            {
+                "src": "./images/work/liv-1.png",
+                "srcset": "./images/work/liv-1@2x.png 2x, ./images/work/liv-1@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=east",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/liv-2.png",
+                "srcset": "./images/work/liv-2@2x.png 2x, ./images/work/liv-2@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=west",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/liv-3.png",
+                "srcset": "./images/work/liv-3@2x.png 2x, ./images/work/liv-3@3x.png 3x",
+                "description": "The demo version of the customer pilot app enables the user to speak into the device to get a speech-to-text output. Transcription the back-end allows the user to deliver it in the their desired language (9 Indian languages, including Hindi, Bengali, Punjabi, Kannada, Telugu, Tamil, Marathi, Gujarati and English). This text is editable at any point, and the user has the ability to stop the transcription process if s/he requires - mostly due to slow internet in most parts of India."
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=north",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/liv-4.png",
+                "srcset": "./images/work/liv-4@2x.png 2x, ./images/work/liv-4@3x.png 3x",
+                "description": "WIP: Dashboard for testers to submit the closest regional language version of the corresponding english words"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=south",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/liv-6.png",
+                "srcset": "./images/work/liv-6@2x.png 2x, ./images/work/liv-6@3x.png 3x",
+                "description": "Showcasing technology: Android application showcasing transcription accuracy (1 of 2)"
 			},
-			{
-				"src": "https://unsplash.it/g/854",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/liv-6.png",
+                "srcset": "./images/work/liv-6@2x.png 2x, ./images/work/liv-6@3x.png 3x",
+                "description": "A custom keyboard with an option to select the language the user chooses to speak in (2 of 2)"
 			}
 		],
-		"description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
+        "description": "At Liv.ai, technology to perform and perfect speech recognition in Hindi, English and all major Indian languages has been in the making for over two years (and counting). Using this technology as a backbone, Liv aims to create a software that builds chatbots. My role was to understand what makes a chatbot framework, and design a tool that would make it possible to create bot applications by feeding in utterances, grouping them together under intents, and allow for entities to act as the moving parts of the machine that would result in the creation of the bot. Starting with the website."
 	},
-	{
-		"title": "DailyRounds Healthcare",
-		"thumbnail": "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/97536668-62FC-49D8-BADD-1844C8908976.png",
-		"images": [
-			{
-				"src": "https://unsplash.it/854",
-				"caption": "Image caption goes here"
+    {
+        "title": "DailyRounds Healthcare",
+        "thumbnail": "./images/work/dr.png",
+        "srcset": "./images/work/dr@2x.png 2x, ./images/work/dr@3x.png 3x",
+        "images": [
+            {
+                "src": "./images/work/dr-01.png",
+                "srcset": "./images/work/dr-01@2x.png 2x, ./images/work/dr-01@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=east",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/dr-02.png",
+                "srcset": "./images/work/dr-02@2x.png 2x, ./images/work/dr-02@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=west",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/dr-03.png",
+                "srcset": "./images/work/dr-03@2x.png 2x, ./images/work/dr-03@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=north",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/dr-04.png",
+                "srcset": "./images/work/dr-04@2x.png 2x, ./images/work/dr-04@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=south",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/dr-05.png",
+                "srcset": "./images/work/dr-05@2x.png 2x, ./images/work/dr-05@3x.png 3x"
 			},
-			{
-				"src": "https://unsplash.it/g/854",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "./images/work/dr-06.png",
+                "srcset": "./images/work/dr-06@2x.png 2x, ./images/work/dr-06@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-07.png",
+                "srcset": "./images/work/dr-07@2x.png 2x, ./images/work/dr-07@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-08.png",
+                "srcset": "./images/work/dr-08@2x.png 2x, ./images/work/dr-08@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-09.png",
+                "srcset": "./images/work/dr-09@2x.png 2x, ./images/work/dr-09@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-10.png",
+                "srcset": "./images/work/dr-10@2x.png 2x, ./images/work/dr-10@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-11.png",
+                "srcset": "./images/work/dr-11@2x.png 2x, ./images/work/dr-11@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-12.png",
+                "srcset": "./images/work/dr-12@2x.png 2x, ./images/work/dr-12@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-13.png",
+                "srcset": "./images/work/dr-13@2x.png 2x, ./images/work/dr-13@3x.png 3x"
+			},
+            {
+                "src": "./images/work/dr-14.png",
+                "srcset": "./images/work/dr-14@2x.png 2x, ./images/work/dr-14@3x.png 3x"
 			}
 		],
-		"description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
+        "description": "DailyRounds is one of the largest academic networks for doctors and medical students. This project comprised creating and fixing the UI and experience for the iPhone and Android applications, the web application counterpart (WIP), and the DailyRounds website."
 	},
-	{
-		"title": "Snapshots of other projects",
-		"thumbnail": "https://cdn.zeplin.io/5971dcc52c32725133f3ae6b/assets/3A2B1A05-2F52-4002-92B4-27EF94FA8631.png",
-		"images": [
-			{
-				"src": "https://unsplash.it/854",
-				"caption": "Image caption goes here"
+    {
+        "title": "Snapshots of other projects",
+        "thumbnail": "./images/work/misc.png",
+        "srcset": "./images/work/misc@2x.png 2x, ./images/work/misc@3x.png 3x",
+        "images": [
+            {
+                "src": "https://unsplash.it/854",
+                "caption": "Image caption goes here"
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=east",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "https://unsplash.it/854/?gravity=east",
+                "caption": "Image caption goes here",
+                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=west",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "https://unsplash.it/854/?gravity=west",
+                "caption": "Image caption goes here",
+                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=north",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "https://unsplash.it/854/?gravity=north",
+                "caption": "Image caption goes here",
+                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
 			},
-			{
-				"src": "https://unsplash.it/854/?gravity=south",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "https://unsplash.it/854/?gravity=south",
+                "caption": "Image caption goes here",
+                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
 			},
-			{
-				"src": "https://unsplash.it/g/854",
-				"caption": "Image caption goes here",
-				"description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
+            {
+                "src": "https://unsplash.it/g/854",
+                "caption": "Image caption goes here",
+                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
 			}
 		],
-		"description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
+        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
 	}
 ]

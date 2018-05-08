@@ -1,8 +1,7 @@
 <div class="work" id="work">
     <h1 class="title">I design interfaces for web and mobile</h1>
     <p class="info">
-        I specialise in designing for digital interfaces, a few samples of which are showcased below. Everything else is showcased
-        on my
+        I specialise in designing for digital interfaces, a few samples of which are showcased below. Everything else is showcased on my
         <a href="https://www.behance.net/enakshi" target="_blank" class="text-link bold-type">Behance</a>.
     </p>
     <!-- Project Grid -->
@@ -11,8 +10,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6" ng-repeat="project in projects">
                     <div class="work-grid-item">
-                        <img alt="" class="work-grid-item-thumbnail" ng-click="select(project)" ng-src="{{project.thumbnail}}" width="100%" data-toggle="modal"
-                            data-target="#projectModal">
+                        <img alt="Project Image" class="work-grid-item-thumbnail" ng-click="select(project)" width="100%" data-toggle="modal" data-target="#projectModal" ng-src="{{project.thumbnail}}" ng-srcset="{{project.srcset}}">
                         <p class="info">{{project.title}}</p>
                     </div>
                 </div>
@@ -36,7 +34,7 @@
                     {{image.description}}
                 </p>
                 <figure>
-                    <img ng-src="{{image.src}}" width="100%">
+                    <img ng-src="{{image.src}}" ng-srcset="{{image.srcset}}" width="100%">
                     <figcaption ng-if="image.caption"> {{image.caption}}</figcaption>
                 </figure>
             </div>
