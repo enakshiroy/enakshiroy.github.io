@@ -46,17 +46,19 @@
 			},
             {
                 "src": "./images/work/c-10.png",
-                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x"
-			},
+                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x",
+                "description": " "
+            },
             {
                 "src": "./images/work/c-11.png",
-                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x"
+                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x",
+                "description": " "
 			}
 		],
         "description": "Compile is a data platform that is built to structure and organize disparate data types. My role involved communicating the product through their website and consequently, creating a dashboard that would make it easier for the users to consume and act upon the data provided. Below is the landing page of their website that I had designed previously, which aimed at visually showcasing the picking of relevant leads from a host of available information points scattered across the internet and other sources."
 	},
     {
-        "title": "Liv Artificial Intelligence",
+        "title": "Liv.ai",
         "thumbnail": "./images/work/liv.png",
         "srcset": "./images/work/liv@2x.png 2x, ./images/work/liv@3x.png 3x",
         "images": [
@@ -154,42 +156,5 @@
 			}
 		],
         "description": "DailyRounds is one of the largest academic networks for doctors and medical students. This project comprised creating and fixing the UI and experience for the iPhone and Android applications, the web application counterpart (WIP), and the DailyRounds website."
-	},
-    {
-        "title": "Snapshots of other projects",
-        "thumbnail": "./images/work/misc.png",
-        "srcset": "./images/work/misc@2x.png 2x, ./images/work/misc@3x.png 3x",
-        "images": [
-            {
-                "src": "https://unsplash.it/854",
-                "caption": "Image caption goes here"
-			},
-            {
-                "src": "https://unsplash.it/854/?gravity=east",
-                "caption": "Image caption goes here",
-                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
-			},
-            {
-                "src": "https://unsplash.it/854/?gravity=west",
-                "caption": "Image caption goes here",
-                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
-			},
-            {
-                "src": "https://unsplash.it/854/?gravity=north",
-                "caption": "Image caption goes here",
-                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
-			},
-            {
-                "src": "https://unsplash.it/854/?gravity=south",
-                "caption": "Image caption goes here",
-                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
-			},
-            {
-                "src": "https://unsplash.it/g/854",
-                "caption": "Image caption goes here",
-                "description": "Three of the five most valuable public companies in the world right now are rooted in the Bay Area: Apple, Google and Facebook. The other two of the top five are still tech companies on the West Coast in the form of Amazon and Microsoft in the Seattle region."
-			}
-		],
-        "description": "Project description: njknfdksfnkdsnfkjdsn kjdsfkjsdkbdsk sdkcjnskckc sdnfkdjsfkjsdn fnsdjknfksnfks"
 	}
 ]
