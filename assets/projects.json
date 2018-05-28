@@ -46,13 +46,11 @@
 			},
             {
                 "src": "./images/work/c-10.png",
-                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x",
-                "description": " "
+                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x"
             },
             {
                 "src": "./images/work/c-11.png",
-                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x",
-                "description": " "
+                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x"
 			}
 		],
         "description": "Compile is a data platform that is built to structure and organize disparate data types. My role involved communicating the product through their website and consequently, creating a dashboard that would make it easier for the users to consume and act upon the data provided. Below is the landing page of their website that I had designed previously, which aimed at visually showcasing the picking of relevant leads from a host of available information points scattered across the internet and other sources."
@@ -91,7 +89,7 @@
                 "description": "A custom keyboard with an option to select the language the user chooses to speak in (2 of 2)"
 			}
 		],
-        "description": "At Liv.ai, technology to perform and perfect speech recognition in Hindi, English and all major Indian languages has been in the making for over two years (and counting). Using this technology as a backbone, Liv aims to create a software that builds chatbots. My role was to understand what makes a chatbot framework, and design a tool that would make it possible to create bot applications by feeding in utterances, grouping them together under intents, and allow for entities to act as the moving parts of the machine that would result in the creation of the bot. Starting with the website."
+        "description": "At Liv.ai, technology to perform and perfect speech recognition in Hindi, English and all major Indian languages has been in the making for over two years (and counting). Using this technology as a backbone, Liv aims to create a software that builds chatbots. My role was to understand what makes a chatbot framework, and design a tool that would make it possible to create bot applications by feeding in utterances, grouping them together under intents, and allow for entities to act as the moving parts of the machine that would result in the creation of the bot. \n\nStarting with the website."
 	},
     {
         "title": "DailyRounds Healthcare",
@@ -120,7 +118,8 @@
 			},
             {
                 "src": "./images/work/dr-06.png",
-                "srcset": "./images/work/dr-06@2x.png 2x, ./images/work/dr-06@3x.png 3x"
+                "srcset": "./images/work/dr-06@2x.png 2x, ./images/work/dr-06@3x.png 3x",
+                "description": "The main feature of the Android/iOS app is a rich medical news-related home feed populated by posts from a large network of specialised users. Another equally prominent highlight is the library section, created and curated in-house, that categorises different topics and sections such as an extensive Drug database, Journal updates, Guidelines, and much more."
 			},
             {
                 "src": "./images/work/dr-07.png",
@@ -132,11 +131,13 @@
 			},
             {
                 "src": "./images/work/dr-09.png",
-                "srcset": "./images/work/dr-09@2x.png 2x, ./images/work/dr-09@3x.png 3x"
+                "srcset": "./images/work/dr-09@2x.png 2x, ./images/work/dr-09@3x.png 3x",
+                "description": "The web version for the app takes on a slightly different approach. From a visual perspective, the striking red has been reduced significantly and used only as accents to lessen a visual overload due to too much contrast, but also to keep the brand colour recall going. The body type has been changed from the sans-serif system fonts on the phone to the serif Georgia to ease readability."
 			},
             {
                 "src": "./images/work/dr-10.png",
-                "srcset": "./images/work/dr-10@2x.png 2x, ./images/work/dr-10@3x.png 3x"
+                "srcset": "./images/work/dr-10@2x.png 2x, ./images/work/dr-10@3x.png 3x",
+                "description": "The India Drug Index caters to doctors and pharmacists, even the lay drug researcher, looking for quick and easy references, available to download for offline use. The extensive database has been created, segregated and categorised by the in-house medical professionals at DailyRounds. The experience direction is intended to be straightforward to minimise obstruction. Available for free on the Android Playstore."
 			},
             {
                 "src": "./images/work/dr-11.png",
@@ -144,7 +145,8 @@
 			},
             {
                 "src": "./images/work/dr-12.png",
-                "srcset": "./images/work/dr-12@2x.png 2x, ./images/work/dr-12@3x.png 3x"
+                "srcset": "./images/work/dr-12@2x.png 2x, ./images/work/dr-12@3x.png 3x",
+                "description": "Marrow, built by doctors, teachers and DailyRounds, is a learning platform for the new-pattern NEET PG, available on web, Android and iOS. It comprises of an extensive question bank, segregated subject-wise, test-series and videos."
 			},
             {
                 "src": "./images/work/dr-13.png",

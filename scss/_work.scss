@@ -1,70 +1,68 @@
 .work {
-  > .title {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  &-grid {
-    margin-top: 47px;
-    margin-bottom: 100px;
-    div[class*='col-'] {
-      margin: 0;
-      padding: 0;
+    > .title {
+        margin-top: 0;
+        margin-bottom: 20px;
     }
-    &-item {
-      margin-right: 13px;
-      margin-bottom: 40px;
-      &-thumbnail {
-        &:hover {
-          cursor: pointer;
-          // box-shadow: 0 0 70px rgba(0, 0, 0, 0.2);
+    &-grid {
+        margin-top: 47px;
+        margin-bottom: 100px;
+        div[class*='col-'] {
+            margin: 0;
+            padding: 0;
         }
-      }
+        &-item {
+            margin-right: 13px;
+            margin-bottom: 40px;
+            &-thumbnail {
+                &:hover {
+                    cursor: pointer;
+                    // box-shadow: 0 0 70px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+        .info {
+            line-height: 2.5;
+            margin-top: 4px;
+        }
     }
-    .info {
-      line-height: 2.5;
-      margin-top: 4px;
-    }
-  }
 }
-
 // ======= Project modal ==========
-
 .project-modal {
-  &-title {
-    margin-top: 72px;
-  }
-  &-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    max-width: 854px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    .info {
-      margin: 50px auto 30px auto;
-      max-width: 800px;
+    &-title {
+        margin-top: 72px;
     }
-    > .info {
-      margin-bottom: 30px;
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 854px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        .info {
+            white-space: pre-line;
+            margin: 50px auto 30px auto;
+            max-width: 600px;
+        }
+        > .info {
+            margin-bottom: 30px;
+        }
     }
-  }
-  &-control {
-    display: flex;
-    width: 100%;
-    margin-top: 75px;
-    margin-bottom: 125px;
-    > a {
-      &:link,
-      &:visited,
-      &:hover,
-      &:active {
-        border-bottom: 0;
-      }
+    &-control {
+        display: flex;
+        width: 100%;
+        margin-top: 75px;
+        margin-bottom: 125px;
+        > a {
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                border-bottom: 0;
+            }
+        }
+        > span {
+            flex-grow: 1;
+        }
     }
-    > span {
-      flex-grow: 1;
-    }
-  }
 }
