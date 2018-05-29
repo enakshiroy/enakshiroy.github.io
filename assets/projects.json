@@ -22,12 +22,14 @@
             {
 
                 "src": "./images/work/c-04.png",
-                "srcset": "./images/work/c-04@2x.png 2x, ./images/work/c-04@3x.png 3x"
+                "srcset": "./images/work/c-04@2x.png 2x, ./images/work/c-04@3x.png 3x",
+                "description": " "
 			},
             {
 
                 "src": "./images/work/c-05.png",
-                "srcset": "./images/work/c-05@2x.png 2x, ./images/work/c-05@3x.png 3x"
+                "srcset": "./images/work/c-05@2x.png 2x, ./images/work/c-05@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/c-06.png",
@@ -46,11 +48,13 @@
 			},
             {
                 "src": "./images/work/c-10.png",
-                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x"
+                "srcset": "./images/work/c-10@2x.png 2x, ./images/work/c-10@3x.png 3x",
+                "description": " "
             },
             {
                 "src": "./images/work/c-11.png",
-                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x"
+                "srcset": "./images/work/c-11@2x.png 2x, ./images/work/c-11@3x.png 3x",
+                "description": " "
 			}
 		],
         "description": "Compile is a data platform that is built to structure and organize disparate data types. My role involved communicating the product through their website and consequently, creating a dashboard that would make it easier for the users to consume and act upon the data provided. Below is the landing page of their website that I had designed previously, which aimed at visually showcasing the picking of relevant leads from a host of available information points scattered across the internet and other sources."
@@ -66,7 +70,8 @@
 			},
             {
                 "src": "./images/work/liv-2.png",
-                "srcset": "./images/work/liv-2@2x.png 2x, ./images/work/liv-2@3x.png 3x"
+                "srcset": "./images/work/liv-2@2x.png 2x, ./images/work/liv-2@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/liv-3.png",
@@ -102,19 +107,23 @@
 			},
             {
                 "src": "./images/work/dr-02.png",
-                "srcset": "./images/work/dr-02@2x.png 2x, ./images/work/dr-02@3x.png 3x"
+                "srcset": "./images/work/dr-02@2x.png 2x, ./images/work/dr-02@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-03.png",
-                "srcset": "./images/work/dr-03@2x.png 2x, ./images/work/dr-03@3x.png 3x"
+                "srcset": "./images/work/dr-03@2x.png 2x, ./images/work/dr-03@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-04.png",
-                "srcset": "./images/work/dr-04@2x.png 2x, ./images/work/dr-04@3x.png 3x"
+                "srcset": "./images/work/dr-04@2x.png 2x, ./images/work/dr-04@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-05.png",
-                "srcset": "./images/work/dr-05@2x.png 2x, ./images/work/dr-05@3x.png 3x"
+                "srcset": "./images/work/dr-05@2x.png 2x, ./images/work/dr-05@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-06.png",
@@ -123,11 +132,13 @@
 			},
             {
                 "src": "./images/work/dr-07.png",
-                "srcset": "./images/work/dr-07@2x.png 2x, ./images/work/dr-07@3x.png 3x"
+                "srcset": "./images/work/dr-07@2x.png 2x, ./images/work/dr-07@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-08.png",
-                "srcset": "./images/work/dr-08@2x.png 2x, ./images/work/dr-08@3x.png 3x"
+                "srcset": "./images/work/dr-08@2x.png 2x, ./images/work/dr-08@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-09.png",
@@ -141,7 +152,8 @@
 			},
             {
                 "src": "./images/work/dr-11.png",
-                "srcset": "./images/work/dr-11@2x.png 2x, ./images/work/dr-11@3x.png 3x"
+                "srcset": "./images/work/dr-11@2x.png 2x, ./images/work/dr-11@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-12.png",
@@ -150,11 +162,13 @@
 			},
             {
                 "src": "./images/work/dr-13.png",
-                "srcset": "./images/work/dr-13@2x.png 2x, ./images/work/dr-13@3x.png 3x"
+                "srcset": "./images/work/dr-13@2x.png 2x, ./images/work/dr-13@3x.png 3x",
+                "description": " "
 			},
             {
                 "src": "./images/work/dr-14.png",
-                "srcset": "./images/work/dr-14@2x.png 2x, ./images/work/dr-14@3x.png 3x"
+                "srcset": "./images/work/dr-14@2x.png 2x, ./images/work/dr-14@3x.png 3x",
+                "description": " "
 			}
 		],
         "description": "DailyRounds is one of the largest academic networks for doctors and medical students. This project comprised creating and fixing the UI and experience for the iPhone and Android applications, the web application counterpart (WIP), and the DailyRounds website."

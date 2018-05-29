@@ -28,12 +28,10 @@
             </h1>
             <p class="info" ng-if="selectedProject.description">{{selectedProject.description}}</p>
             <div ng-repeat="image in selectedProject.images">
-                <p class="info" ng-if="image.description">
-                    {{image.description}}
-                </p>
+                <p class="info" ng-if="image.description">{{image.description}}</p>
                 <figure>
                     <img ng-src="{{image.src}}" ng-srcset="{{image.srcset}}" width="100%">
-                    <figcaption ng-if="image.caption"> {{image.caption}}</figcaption>
+                    <figcaption ng-if="image.caption">{{image.caption}}</figcaption>
                 </figure>
             </div>
             <div class="project-modal-control">
