@@ -172,5 +172,42 @@
 			}
 		],
         "description": "DailyRounds is one of the largest academic networks for doctors and medical students. This project comprised creating and fixing the UI and experience for the iPhone and Android applications, the web application counterpart (WIP), and the DailyRounds website."
-	}
+	},
+    {
+        "title": "Healthcare Innovate",
+        "thumbnail": "./images/work/clinivid.png",
+        "srcset": "./images/work/clinivid@2x.png 2x, ./images/work/clinivid@3x.png 3x",
+        "images": [
+            {
+                "src": "./images/work/hci-01.png",
+                "srcset": "./images/work/hci-01@2x.png 2x, ./images/work/hci-01@3x.png 3x"
+			},
+            {
+                "src": "./images/work/hci-02.png",
+                "srcset": "./images/work/hci-02@2x.png 2x, ./images/work/hci-02@3x.png 3x",
+                "description": "The initial process comprised fixing the existing mobile app on iOS.\n(Below, L-R: Welcome, annotating a document, viewing document, case discussion)"
+			},
+            {
+                "src": "./images/work/hci-03.png",
+                "srcset": "./images/work/hci-03@2x.png 2x, ./images/work/hci-03@3x.png 3x",
+                "description": "Below is a snapshot of the web application, created after the finished mobile screens."
+			},
+            {
+                "src": "./images/work/hci-04.png",
+                "srcset": "./images/work/hci-04@2x.png 2x, ./images/work/hci-04@3x.png 3x",
+                "description": "My role comprised revamping the existing flows and interface in order to accommodate new features and integrate the mobile and web apps. For example, adding recipients to a case will work differently across web and mobile. The larger screen surface on a desktop allows for interactions keeps the user on the same page without losing context. On mobile, we want similar experiences, but due to the limitations of the device size, we would need to decide whether to simplify the interaction or navigate to a new screen with added functionality."
+			},
+            {
+                "src": "./images/work/hci-05.png",
+                "srcset": "./images/work/hci-05@2x.png 2x, ./images/work/hci-05@3x.png 3x",
+                "description": " "
+			},
+            {
+                "src": "./images/work/home.png",
+                "srcset": "./images/work/home@2x.png 2x, ./images/work/home@3x.png 3x",
+                "description": "Following is a snapshot of the revamped marketing website (WIP) to accommodate the new look and feel of the app and communicate its new features."
+			}
+        ],
+        "description": "Clinivid by Healthcare Innovate is a secure communication platform for healthcare professionals. Available across a range of devices, including mobile (Android and iOS) and web (WIP), Clinivid helps get important information to other clinicians instantly and securely, while also protecting sensitive patient information without storing it on any device. It is designed for the clinician on the go."
+    }
 ]
