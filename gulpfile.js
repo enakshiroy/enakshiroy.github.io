@@ -1,123 +1,128 @@
-const gulp = require('gulp');
+const { src, dest, series, watch, task, parallel } = require('gulp');
 const browserSync = require('browser-sync');
-const reload = browserSync.reload;
+const { reload } = browserSync;
+
+const imagemin = require('gulp-imagemin');
+const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const sourcemaps = require('gulp-sourcemaps');
+
 const babel = require('gulp-babel');
-const runSequence = require('run-sequence');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 const browserify = require('browserify');
 const uglify = require('gulp-uglify');
 const del = require('del');
-const imagemin = require('gulp-imagemin');;
 
 /**
  * Logs the error with name of current running task.
- * @param {string} task name of the running task. 
+ * @param {string} task name of the running task.
  */
-function logError(task, done) {
-    return (error) => {
-        console.error(`[${task}] ${error.message}`);
-        done();
-    };
-}
+const logError = (task, done) => (error) => {
+  console.error(`[${task}] ${error.message}`);
+  done();
+};
 
 // Fonts
-gulp.task('fonts', () => {
-    return gulp.src('./fonts/*.{ttf,otf}')
-        .pipe(gulp.dest('./dist/fonts'));
-});
+const fontTask = () => src('./fonts/*.{ttf,otf}').pipe(dest('./dist/fonts'));
 
-gulp.task('views', (done) => {
-    browserSync.reload();
-    done();
-});
+// Views
+const reloadTask = (done) => {
+  reload();
+  done();
+};
 
-gulp.task('images', function () {
-    return gulp.src('./images/**/*.+(png|jpg|jpeg|gif|svg)')
-        .pipe(imagemin({
-            // Setting interlaced to true
-            interlaced: true
-        }))
-        .pipe(gulp.dest('dist/images'))
-});
+// Images
+const imageTask = () =>
+  src('./images/**/*.+(png|jpg|jpeg|gif|svg)')
+    // TODO: Use image min when it's fast.
+    // .pipe(
+    //   imagemin({
+    //     // Setting interlaced to true
+    //     interlaced: true,
+    //     optimizationLevel: 5
+    //   })
+    // )
+    .pipe(dest('dist/images'));
+
+const sassTask = (done) =>
+  src('./scss/**/*.scss')
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true
+      })
+    )
+    .pipe(sass())
+    .on('error', logError('sass', done))
+    .pipe(autoprefixer())
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist/css'))
+    .pipe(
+      reload({
+        stream: true
+      })
+    );
 
 // Compile our sass files.
-gulp.task('sass', ['fonts'], (done) => {
-    return gulp.src('./scss/**/*.scss')
-        .pipe(sourcemaps.init({
-            loadMaps: true
-        }))
-        .pipe(sass())
-        .on('error', logError('sass', done))
-        .pipe(autoprefixer())
-        .pipe(cssnano())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(reload({
-            stream: true
-        }));
-});
+const cssTask = series(fontTask, sassTask);
 
 // process JS files and return the stream.
-gulp.task('js', (done) => {
-    return browserify({
-        entries: './src/app.js',
-        debug: true
-    }).bundle()
-        .on('error', logError('js', done))
-        .pipe(source('app.js'))
-        .pipe(buffer())
-        .pipe(sourcemaps.init({
-            loadMaps: true
-        }))
-        .pipe(babel({
-            presets: ['es2015'],
-            compact: true
-        }))
-        .on('error', logError('js', done))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/js'));
-});
+const jsTask = (done) =>
+  browserify({
+    entries: './src/app.js',
+    debug: true
+  })
+    .bundle()
+    .on('error', logError('js', done))
+    .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(
+      sourcemaps.init({
+        loadMaps: true
+      })
+    )
+    .pipe(
+      babel({
+        presets: ['es2015'],
+        compact: true
+      })
+    )
+    .on('error', logError('js', done))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist/js'));
 
 // create a task that ensures the `js` task is complete before
 // reloading browsers
-gulp.task('js-watch', ['js'], (done) => {
-    browserSync.reload();
-    done();
-});
+const jsWatchTask = series(jsTask, reloadTask);
 
-gulp.task('serve', () => {
-    browserSync({
-        server: {
-            baseDir: './',
-            index: 'index.html'
-        }
-    });
-});
+const serveTask = (done) => {
+  browserSync.init({
+    server: {
+      baseDir: './',
+      index: 'index.html'
+    }
+  });
+  done();
+};
 
-gulp.task('cleanup', function () {
-    del('dist');
-});
+const cleanupTask = (done) => {
+  del('dist');
+};
 
 // Sets wacthers for files and runs corresponding tasks.
-gulp.task('watch', () => {
-    gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.js', ['js-watch']);
-    gulp.watch('views/*.html', ['views']);
-});
+const watchTask = () => {
+  watch('scss/**/*.scss', cssTask);
+  watch('src/**/*.js', jsWatchTask);
+  watch('views/*.html', reloadTask);
+};
 
-gulp.task('build', cb => {
-    runSequence([
-        'sass',
-        'js',
-        'images'
-    ],
-        cb);
-});
+task('build', parallel(cssTask, jsTask, imageTask));
 
-gulp.task('default', ['sass', 'js', 'images', 'serve', 'watch']);
+exports.default = series(
+  parallel(jsTask, series(sassTask, imageTask)),
+  serveTask,
+  watchTask
+);
