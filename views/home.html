@@ -2,7 +2,12 @@
   <section class="home-wrapper">
     <section class="home-info">
       <h1 class="title">Hello, I&rsquo;m Enakshi</h1>
-      <p ng-repeat="me in aboutMe" compile="me"></p>
+      <section class="user-image text-center">
+        <img ng-src="{{ defaultMeme }}" alt="Enakshi" />
+      </section>
+      <section class="about">
+        <p ng-repeat="me in aboutMe" compile="me"></p>
+      </section>
     </section>
     <section id="memes" class="home-meme">
       <img ng-if="defaultMeme" ng-src="{{ defaultMeme }}" alt="" />
