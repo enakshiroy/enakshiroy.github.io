@@ -78,6 +78,26 @@
     &-meme {
       display: none;
     }
+    .modal {
+      &-body {
+        @include flexCenter();
+        flex-direction: column;
+        button.close {
+          margin-left: auto;
+          margin-bottom: 21px;
+          color: $text-color;
+          opacity: 1;
+          outline: none;
+        }
+        &-body,
+        &-header {
+          background: $transparent;
+        }
+        &-content {
+          background: $transparent-white;
+        }
+      }
+    }
     &-info {
       > .title {
         margin-bottom: 30px;
@@ -89,18 +109,18 @@
       > .about {
         margin-top: 39px;
       }
-      a {
-        &:link,
-        :visited,
-        :hover,
-        :active {
-          cursor: default;
-          background: transparent;
-          text-decoration: none;
-          color: $text-color;
-          border-bottom: none;
-        }
-      }
+      // a {
+      //   &:link,
+      //   :visited,
+      //   :hover,
+      //   :active {
+      //     cursor: default;
+      //     background: transparent;
+      //     text-decoration: none;
+      //     color: $text-color;
+      //     border-bottom: none;
+      //   }
+      // }
     }
   }
 }

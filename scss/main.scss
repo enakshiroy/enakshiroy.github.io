@@ -107,9 +107,10 @@ a {
     text-decoration: none;
     border-bottom: $default-bottom-border;
   }
+
   &:hover {
-    background-color: $text-color;
-    color: white;
+    background-color: $text-color !important;
+    color: white !important;
   }
 }
 // Figure Caption.

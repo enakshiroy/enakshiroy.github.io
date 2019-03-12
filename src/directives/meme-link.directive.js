@@ -31,6 +31,16 @@ const memeLinkDirective = ($window) => {
         defaultImg.style.opacity = 1;
       }
     };
+
+    $scope.onClick = ($event) => {
+      if ($window.innerWidth <= SMART_PHONE_WIDTH) {
+        $scope.isVisible = true;
+        return;
+      }
+      // Clicking element so that events can be bubbled up.
+      const nativeElement = element[0];
+      nativeElement.click();
+    };
   };
   return {
     link: link,
@@ -45,9 +55,18 @@ const memeLinkDirective = ($window) => {
             href="javascript: void 0;"
             ng-mouseenter="show()"
             ng-mouseleave="hide()"
+            ng-click="onClick($event)"
             >
             <ng-transclude></ng-transclude>
           </a>
+          <modal visible="isVisible" class="home-modal">
+            <modal-body>
+              <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span aria-hidden="true"> × </span>
+              </button>
+              <img ng-src="{{src}}" width="100%">
+            </modal-body>
+          </modal>
           `
   };
 };
