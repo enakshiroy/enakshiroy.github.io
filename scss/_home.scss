@@ -22,13 +22,6 @@
     > .user-image {
       display: none;
     }
-    a {
-      &:link,
-      &:active,
-      &:visited {
-        border-bottom: $default-bottom-border;
-      }
-    }
   }
   &-social {
     padding-top: 40px;
@@ -37,14 +30,7 @@
     flex-wrap: wrap;
     &-link {
       margin-right: 15px;
-      a {
-        &:link,
-        &:active,
-        &:visited,
-        &:hover {
-          border-bottom: 0;
-        }
-      }
+
       &:first-child {
         margin-left: 0px;
       }
@@ -61,7 +47,7 @@
       width: 304px;
       position: absolute;
       // In case image is png other images should not be visible.
-      background-color: $white;
+      background-color: $bg-color;
     }
   }
   @include when-tablet {
@@ -111,18 +97,6 @@
       > .about {
         margin-top: 39px;
       }
-      // a {
-      //   &:link,
-      //   :visited,
-      //   :hover,
-      //   :active {
-      //     cursor: default;
-      //     background: transparent;
-      //     text-decoration: none;
-      //     color: $text-color;
-      //     border-bottom: none;
-      //   }
-      // }
     }
   }
 }
