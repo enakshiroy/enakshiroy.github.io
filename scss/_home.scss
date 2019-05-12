@@ -47,7 +47,7 @@
       width: 304px;
       position: absolute;
       // In case image is png other images should not be visible.
-      background-color: $white;
+      background-color: $bg-color;
     }
   }
   @include when-tablet {

@@ -189,6 +189,7 @@ figcaption {
   }
   &:hover {
     background-color: transparent;
+    background-image: none;
     &::after,
     &::before {
       opacity: 1;
@@ -357,11 +358,11 @@ figcaption {
     }
   }
   &-instagram {
-    background-image: url('../images/instagram_2.png');
+    background-image: url('../images/insta.png');
     background-image: image-set(
-      url('../../images/instagram_2.png') 1x,
-      url('../../images/instagram_2@2x.png') 2x,
-      url('../../images/instagram_2@3x.png') 3x
+      url('../../images/insta.png') 1x,
+      url('../../images/insta@2x.png') 2x,
+      url('../../images/insta@3x.png') 3x
     );
     &::before {
       content: ' ';
