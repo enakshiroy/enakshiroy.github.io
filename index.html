@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- <base href="#"> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:url" content="http://www.enakshiroy.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="er..." />
-    <meta property="og:description" content="Designer of web and mobile interfaces and user experience. Likes gradients. Also sushi." />
+    <meta
+      property="og:description"
+      content="Designer of web and mobile interfaces and user experience. Likes gradients. Also sushi."
+    />
     <meta property="og:image" content="images/social_media.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:author" content="Enakshi Roy" />
     <meta name="author" content="Enakshi Roy" />
-    <meta name="keywords" content="ux, ui, blogger, designer, developer">
+    <meta name="keywords" content="ux, ui, blogger, designer, developer" />
     <title>er..</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="dist/css/main.css">
-</head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
 
-<body ng-strict-di ng-app="enakshi" class="container" ng-cloak>
-
-    <header>
+  <body ng-strict-di ng-app="enakshi" ng-cloak>
+    <div class="container">
+      <header>
         <nav class="nav-bar">
-            <a class="nav-bar-link" ng-class="{'nav-bar-link-active': isActive('/')}" href="#">Home</a>
-            <a class="nav-bar-link" ng-class="{'nav-bar-link-active': isActive('/work')}" href="#/work">Work</a>
-            <a class="nav-bar-link" href="./assets/enakshi_roy.pdf" target="_blank">Resume</a>
+          <a
+            class="nav-bar-link"
+            ng-class="{'nav-bar-link-active': isActive('/')}"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="nav-bar-link"
+            ng-class="{'nav-bar-link-active': isActive('/work')}"
+            href="#/work"
+            >Work</a
+          >
+          <a
+            class="nav-bar-link"
+            href="./assets/enakshi_roy.pdf"
+            target="_blank"
+            >Resume</a
+          >
         </nav>
-    </header>
+      </header>
 
-    <main>
+      <main>
         <ng-view></ng-view>
-    </main>
+      </main>
 
-    <footer>
+      <footer>
         <span>
-            <a href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi" target="_top">enakshi249@gmail.com</a>
+          <a
+            href="mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi"
+            target="_top"
+            >enakshi249@gmail.com</a
+          >
         </span>
         <i class="sushi"></i>
         <span>
-            <a href="tel:+33753700815" target="_top">+33753700815</a>
+          <a href="tel:+33753700815" target="_top">+33753700815</a>
         </span>
-    </footer>
+      </footer>
+    </div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="dist/js/app.js"></script>
-</body>
-
+  </body>
 </html>

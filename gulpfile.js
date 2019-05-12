@@ -6,7 +6,7 @@ const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
+const cleanCSS = require('gulp-clean-css');
 
 const babel = require('gulp-babel');
 const buffer = require('vinyl-buffer');
@@ -56,7 +56,7 @@ const sassTask = (done) =>
     .pipe(sass())
     .on('error', logError('sass', done))
     .pipe(autoprefixer())
-    .pipe(cssnano())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/css'))
     .pipe(
