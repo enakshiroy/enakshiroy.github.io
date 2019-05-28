@@ -14,6 +14,9 @@ const source = require('vinyl-source-stream');
 const browserify = require('browserify');
 const uglify = require('gulp-uglify');
 const del = require('del');
+const responsive = require('gulp-responsive');
+
+const gulpPngquant = require('gulp-pngquant');
 
 /**
  * Logs the error with name of current running task.
@@ -44,6 +47,22 @@ const imageTask = () =>
     //     optimizationLevel: 5
     //   })
     // )
+    // .pipe(
+    //   responsive(
+    //     {
+    //       '**/*.png': { quality: 50 }
+    //     },
+    //     {
+    //       // global quality for all images
+    //       quality: 50
+    //     }
+    //   )
+    // )
+    .pipe(
+      gulpPngquant({
+        quality: '70'
+      })
+    )
     .pipe(dest('dist/images'));
 
 const sassTask = (done) =>

@@ -3,14 +3,14 @@
     <section class="home-info">
       <h1 class="title">Hello, I&rsquo;m Enakshi</h1>
       <section class="user-image text-center">
-        <img ng-src="{{ defaultMeme }}" alt="Enakshi" width="100%" />
+        <img ng-src="{{ :: defaultMeme }}" alt="Enakshi" width="100%" />
       </section>
       <section class="about">
         <p ng-repeat="me in aboutMe" compile="me"></p>
       </section>
     </section>
     <section id="memes" class="home-meme">
-      <img ng-if="defaultMeme" ng-src="{{ defaultMeme }}" alt="" />
+      <img ng-if="defaultMeme" ng-src="{{ :: defaultMeme }}" alt="" />
     </section>
   </section>
   <!-- Social Navigation link -->
