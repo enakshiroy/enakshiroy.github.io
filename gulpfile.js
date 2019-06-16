@@ -40,13 +40,13 @@ const reloadTask = (done) => {
 const imageTask = () =>
   src('./images/**/*.+(png|jpg|jpeg|gif|svg)')
     // TODO: Use image min when it's fast.
-    // .pipe(
-    //   imagemin({
-    //     // Setting interlaced to true
-    //     interlaced: true,
-    //     optimizationLevel: 5
-    //   })
-    // )
+    .pipe(
+      imagemin({
+        verbose: true,
+        interlaced: true,
+        optimizationLevel: 5
+      })
+    )
     // .pipe(
     //   responsive(
     //     {
@@ -58,11 +58,11 @@ const imageTask = () =>
     //     }
     //   )
     // )
-    .pipe(
-      gulpPngquant({
-        quality: '70'
-      })
-    )
+    // .pipe(
+    //   gulpPngquant({
+    //     quality: '70'
+    //   })
+    // )
     .pipe(dest('dist/images'));
 
 const sassTask = (done) =>
