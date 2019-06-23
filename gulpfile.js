@@ -1,3 +1,4 @@
+const argv = require('minimist')(process.argv.slice(2));
 const { src, dest, series, watch, task, parallel } = require('gulp');
 const browserSync = require('browser-sync');
 const { reload } = browserSync;
@@ -18,6 +19,8 @@ const responsive = require('gulp-responsive');
 
 const gulpPngquant = require('gulp-pngquant');
 
+const isDevelopment = argv.env === 'DEV';
+
 /**
  * Logs the error with name of current running task.
  * @param {string} task name of the running task.
@@ -37,33 +40,21 @@ const reloadTask = (done) => {
 };
 
 // Images
-const imageTask = () =>
-  src('./images/**/*.+(png|jpg|jpeg|gif|svg)')
-    // TODO: Use image min when it's fast.
-    .pipe(
+const imageTask = () => {
+  let images = src('./images/**/*.+(png|jpg|jpeg|gif|svg)');
+
+  if (!isDevelopment) {
+    images = images.pipe(
       imagemin({
         verbose: true,
         interlaced: true,
         optimizationLevel: 5
       })
-    )
-    // .pipe(
-    //   responsive(
-    //     {
-    //       '**/*.png': { quality: 50 }
-    //     },
-    //     {
-    //       // global quality for all images
-    //       quality: 50
-    //     }
-    //   )
-    // )
-    // .pipe(
-    //   gulpPngquant({
-    //     quality: '70'
-    //   })
-    // )
-    .pipe(dest('dist/images'));
+    );
+  }
+
+  return images.pipe(dest('dist/images'));
+};
 
 const sassTask = (done) =>
   src('./scss/**/*.scss')
