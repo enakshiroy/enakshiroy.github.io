@@ -7,7 +7,7 @@ const memeLinkDirective = ($window) => {
     return img;
   };
 
-  const link = ($scope, element, attrs) => {
+  const link = ($scope, element) => {
     const img = createImgElement($scope.src, { opacity: 0 });
     const target = document.getElementById($scope.target);
     target.appendChild(img);
@@ -57,17 +57,17 @@ const memeLinkDirective = ($window) => {
             ng-mouseleave="hide()"
             ng-click="onClick($event)"
             >
-            <ng-transclude></ng-transclude>
-          </a>
-          <modal visible="isVisible" class="home-modal">
-            <modal-body>
-              <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                <span aria-hidden="true"> × </span>
-              </button>
-              <img ng-src="{{src}}" width="100%">
-            </modal-body>
-          </modal>
-          `
+            <ng-transclude></ng-transclude
+            ><modal visible="isVisible" class="home-modal">
+              <modal-body>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true"> × </span>
+                </button>
+                <img ng-src="{{src}}" width="100%">
+              </modal-body>
+            </modal
+            ></a>
+          `.trim()
   };
 };
 
