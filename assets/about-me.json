@@ -1,7 +1,7 @@
 {
   "defaultMeme": "dist/images/er@3x.png",
   "info": [
-    "I’m an independent <meme-link src=\"dist/images/exp@3x.png\" target=\"memes\">User Interface and Experience Designer</meme-link> based in Bangalore, India. For the next few months, you'll find me lurking around in Berlin. <i>Prost!</i>🍻",
+    "I’m an independent <meme-link src=\"dist/images/exp@3x.png\" target=\"memes\">User Interface and Experience Designer</meme-link> based in Bangalore, India. For the next few months, you'll find me lurking around in Berlin. <i>Guten tag!</i>🍻",
     "Primarily engaging with startups in the healthcare, data and AI domains, I try to design <meme-link target=\"memes\" src=\"dist/images/beautiful@3x.png\">beautiful, functional products and systems</meme-link>. I believe in developing long-lasting relationships with my clients to ensure design plays its role as a great <meme-link target=\"memes\" src=\"dist/images/value@3x.png\">value-add</meme-link> to their businesses.",
     "I would love to hear from you over <a href=\"mailto:enakshi249@gmail.com?Subject=Hello%20Enakshi\" target=\"_top\" style=\"background: transparent\"><meme-link target=\"memes\" src=\"dist/images/call-me-maybe_3@3x.png\">email</meme-link></a>."
   ]
